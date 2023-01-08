@@ -20,6 +20,31 @@ const Typography = () => {
       <div className="tracking-tight">tracking tight</div>
       <div className="tracking-normal">tracking normal</div>
       <div className="tracking-wide">tracking wide</div>
+      <div className="text-left">text-left</div>
+      <div className="text-right">text-right</div>
+      <div className="text-center">text-center</div>
+      <div className="underline decoration-4 decoration-bule-400">
+        underline decoration-4 decoration-bule-400
+      </div>
+      <div className=" underline decoration-double">
+        underline decoration-double
+      </div>
+      <div className=" underline decoration-dotted">
+        underline decoration-dotted
+      </div>
+      <div className=" underline decoration-dashed">
+        underline decoration-dashed
+      </div>
+      <div className=" underline decoration-wavy">
+        underline decoration-wavy
+      </div>
+      <div className=" underline decoration-4  underline-offset-8">
+        underline decoration-4 underline-offset-8
+      </div>
+      <p className="normal-case">normal case</p>
+      <p className="uppercase">p uppercase</p>
+      <p className="lowercase">p lowercase</p>
+      <p className="capitalize">p capitalize</p>
     </div>
   )
 }
