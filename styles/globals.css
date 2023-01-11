@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+  .link::after {
+    --scale: 0;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 110%;
+    height: 1px;
+    @apply bg-blue-400;
+    transform: scaleX(var(--scale));
+    transform-origin: 50%;
+    transition: transform 0.3s cubic-bezier(0.535, 0.05, 0.355, 1);
+  }
+  .link:hover::after {
+    --scale: 1;
+  }
+  .hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+    z-index: 100;
+  }
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: #333;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+
+  .hamburger-middle {
+    transform: translateY(7px);
+  }
+
+  .hamburger-bottom {
+    transform: translateY(14px);
+  }
+
+  .munuBtn-open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+  }
+
+  .munuBtn-open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+  }
+
+  .munuBtn-open .hamburger-middle {
+    display: none;
+  }
+
+  .munuBtn-open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  }
+  .menu-open {
+    @apply translate-x-1/2;
+  }
+}
