@@ -1,27 +1,94 @@
-# Next.js + Tailwind CSS Example
+# Next.js + Tailwind CSS 遥在官网
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+### 新增页面：Pages 目录下新建文件夹
 
-## Deploy your own
+### css 命名规范：
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+标签-操作
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+### 函数命名：
 
-## How to use
+#### 1.1 变量
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+##### 命名方法
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+小驼峰式命名法。
+
+**命名规范**：
+
+前缀应当是名词。(函数的名字前缀为动词，以此区分变量和函数)
+
+**命名建议**
+
+：尽量在变量名字中体现所属类型，如:length、count 等表示数字类型；而包含 name、title 表示为字符串类型。
+
+**eg**:
+
+```javascript
+let maxCount = 10
+let tableTitle = 'LoginTable'
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+#### 1.2 常量
+
+##### 命名方法：
+
+名称全部大写。
+
+##### 命名规范：
+
+使用大写字母和下划线来组合命名，下划线用以分割单词。
+
+**eg**:
+
+```ini
+const MAX_COUNT = 10;
+const URL = 'http://www.foreverz.com';复制代码
 ```
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+#### 1.3 函数
+
+##### 命名方法：
+
+小驼峰式命名法。
+
+**命名规范**：
+
+前缀应当为动词。
+
+**命名建议**：
+
+可使用常见动词约定（不局限于这些）
+
+| 动词 | 含义                         | 返回值                                                |
+| ---- | ---------------------------- | ----------------------------------------------------- |
+| can  | 判断是否可执行某个动作(权限) | 函数返回一个布尔值。true：可执行；false：不可执行     |
+| has  | 判断是否含有某个值           | 函数返回一个布尔值。true：含有此值；false：不含有此值 |
+| is   | 判断是否为某个值             | 函数返回一个布尔值。true：为某个值；false：不为某个值 |
+| get  | 获取某个值                   | 函数返回一个非布尔值                                  |
+| set  | 设置某个值                   | 无返回值、返回是否设置成功或者返回链式对象            |
+| load | 加载某些数据                 | 无返回值或者返回是否加载完成的结果                    |
+
+**eg**:
+
+```csharp
+// 是否可阅读
+function canRead(): boolean {
+  return true;
+}
+// 获取名称
+function getName(): string {
+  return this.name;
+}
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+提交规范：
+
+feat: 添加新特性
+fix: 修复 bug
+docs: 仅仅修改了文档
+style: 仅仅修改了空格、格式缩进、都好等等，不改变代码逻辑
+refactor: 代码重构，没有加新功能或者修复 bug
+perf: 增加代码进行性能测试
+test: 增加测试用例
+chore: 改变构建流程、或者增加依赖库、工具等
