@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
+import { useRef } from 'react'
 import Header from '../components/Header'
 import Head from 'next/head'
-import { url } from 'inspector'
 import Footer from '../components/Footer'
 const Home: NextPage = () => {
+  const sectionOneRef = useRef<HTMLDivElement>(null)
   return (
     <div>
       <Head>
@@ -25,7 +26,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-
+      <main className="relative top-0">
+        <section>
+          <div className="container"></div>
+        </section>
+      </main>
       <Footer />
     </div>
   )
