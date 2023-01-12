@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
-  nav.link::after {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+      'Helvetica Neue', sans-serif;
+  }
+  nav .link::after {
     --scale: 0;
     content: '';
     position: absolute;
@@ -15,7 +20,7 @@
     transform-origin: 50%;
     transition: transform 0.3s cubic-bezier(0.535, 0.05, 0.355, 1);
   }
-  nav.link:hover::after {
+  nav .link:hover::after {
     --scale: 1;
   }
   .hamburger {

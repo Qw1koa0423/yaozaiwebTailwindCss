@@ -300,9 +300,9 @@ const Header: NextPage = () => {
     }
   }
   return (
-    <div className="fixed w-full bg-white px-14 py-5 mx-auto z-20">
+    <div className="fixed w-full bg-white px-14 py-5 mx-auto z-20 2xl:pl-64 2xl:pr-0 2xl:py-3">
       {/* 导航栏 */}
-      <nav className=" flex items-center justify-between">
+      <nav className=" flex items-center justify-between relative">
         <div className=" flex items-center space-x-11">
           {/* logo */}
           <Image
@@ -313,20 +313,118 @@ const Header: NextPage = () => {
             className=" h-14 w-auto cursor-pointer"
           />
           {/* 导航栏菜单-pc */}
-          <div className=" hidden space-x-14 ">
+          <div className=" hidden space-x-14 2xl:flex">
             <Link
               href={'/'}
               className="link relative transition-colors hover:text-blue-400">
               首页
             </Link>
             <Link
-              href={'/'}
+              href={''}
               className="link relative transition-colors hover:text-blue-400 group">
               软件技术&服务
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
+              {/* 软件技术与服务下拉 */}
+              <div className="hidden absolute  -left-36 w-[600px] pt-5  cursor-default group-hover:flex ">
+                <div className="  text-[#333] border flex-col items-start  space-y-14 p-12 flex  ">
+                  <div className=" flex items-center justify-start space-x-2">
+                    <Image
+                      src={'/navbar/rjjsyfw.png'}
+                      alt="软件技术与服务"
+                      width={33}
+                      height={31}
+                      className="translate-y-0.5"
+                    />
+                    <span className=" font-bold text-4xl">软件技术与服务</span>
+                  </div>
+                  <div className=" grid grid-cols-2 gap-16">
+                    <div className=" flex flex-col items-center justify-center space-y-5">
+                      <div className=" flex items-center h-44">
+                        <Image
+                          src={'/navbar/yztpypt.png'}
+                          alt="遥在TPCloud云平台"
+                          height={169}
+                          width={160}
+                        />
+                      </div>
+                      <div className=" text-2xl font-normal">
+                        遥在TPCloud云平台
+                      </div>
+                      <div className=" flex flex-col space-y-8">
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            XR超高清低延迟云平台
+                          </Link>
+                        </div>
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            XR-NeRF实景建模引擎
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className=" flex flex-col items-center justify-center space-y-5">
+                      <div className=" flex items-center h-44">
+                        <Image
+                          src="/navbar/tpxrsdk.png"
+                          height={160}
+                          width={220}
+                          alt="TP-XRSDK"
+                        />
+                      </div>
+
+                      <div className="text-2xl font-normal">TP-XRSDK</div>
+                      <div className=" flex flex-col space-y-8">
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg  hover:text-blue-400">
+                            相机端低延迟SDK
+                          </Link>
+                        </div>
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            VR/AR播放端SDK
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </Link>
             <Link
               href={'/'}
@@ -336,6 +434,82 @@ const Header: NextPage = () => {
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
+              <div className="hidden absolute  -left-96 w-[1200px] pt-5  cursor-default group-hover:flex ">
+                <div className=" text-[#333] border flex-col items-start  space-y-14 p-12 flex">
+                  <div className=" flex items-center justify-start space-x-2">
+                    <Image
+                      src={'/navbar/yjcp.png'}
+                      alt="软件技术与服务"
+                      width={34}
+                      height={32}
+                      className="translate-y-0.5"
+                    />
+                    <span className=" font-bold text-4xl">硬件产品</span>
+                  </div>
+                  <div className=" flex items-center justify-center space-x-12">
+                    <Link
+                      href={'/'}
+                      className=" flex flex-col space-y-0.5 items-center justify-center">
+                      <div className="h-44 flex items-center justify-center">
+                        <Image
+                          src={'/navbar/tprobot.png'}
+                          alt="TP Robot"
+                          width={76}
+                          height={148}
+                        />
+                      </div>
+                      <div className=" link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        TP Robot
+                      </div>
+                    </Link>
+                    <Link
+                      href={'/'}
+                      className=" flex flex-col space-y-0.5 items-center justify-center">
+                      <div className="h-44 flex items-center justify-center">
+                        <Image
+                          src={'/navbar/tprobot.png'}
+                          alt="TP Robot"
+                          width={76}
+                          height={148}
+                        />
+                      </div>
+                      <div className=" link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        TP Robot
+                      </div>
+                    </Link>
+                    <Link
+                      href={'/'}
+                      className=" flex flex-col space-y-0.5 items-center justify-center">
+                      <div className="h-44 flex items-center justify-center ">
+                        <Image
+                          src={'/navbar/tprobot.png'}
+                          alt="TP Robot"
+                          width={76}
+                          height={148}
+                        />
+                      </div>
+                      <div className=" link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        TP Robot
+                      </div>
+                    </Link>
+                    <Link
+                      href={'/'}
+                      className=" flex flex-col space-y-0.5 items-center justify-center">
+                      <div className="h-44 flex items-center justify-center">
+                        <Image
+                          src={'/navbar/tprobot.png'}
+                          alt="TP Robot"
+                          width={76}
+                          height={148}
+                        />
+                      </div>
+                      <div className=" link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        TP Robot
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </Link>
             <Link
               href={'/'}
@@ -345,6 +519,7 @@ const Header: NextPage = () => {
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
+              <div className="hidden absolute  -left-36 w-[600px] pt-5  cursor-default group-hover:flex "></div>
             </Link>
             <Link
               href={'/'}
@@ -354,6 +529,7 @@ const Header: NextPage = () => {
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
+              <div className="hidden absolute  -left-36 w-[600px] pt-5  cursor-default group-hover:flex "></div>
             </Link>
             <Link
               href={'/'}
@@ -384,7 +560,7 @@ const Header: NextPage = () => {
               setMenuList(menus)
             }, 500)
           }}
-          className="block hamburger focus:outline-none"
+          className="block hamburger focus:outline-none  2xl:hidden"
           type="button">
           <span className="hamburger-top"></span>
           <span className="hamburger-middle"></span>
