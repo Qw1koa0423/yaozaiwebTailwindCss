@@ -300,9 +300,9 @@ const Header: NextPage = () => {
     }
   }
   return (
-    <div className="fixed w-full bg-white px-14 py-5 mx-auto ">
+    <div className="fixed w-full bg-white px-14 py-5 mx-auto z-20">
       {/* 导航栏 */}
-      <nav className=" flex items-center justify-between z-20">
+      <nav className=" flex items-center justify-between">
         <div className=" flex items-center space-x-11">
           {/* logo */}
           <Image

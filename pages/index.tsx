@@ -3,10 +3,19 @@ import { useRef } from 'react'
 import Header from '../components/Header'
 import Head from 'next/head'
 import Footer from '../components/Footer'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper'
+import Image from 'next/image'
 const Home: NextPage = () => {
   const sectionOneRef = useRef<HTMLDivElement>(null)
   return (
     <div>
+      <style jsx global>{`
+        span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+          width: 1.5rem;
+          border-radius: 0.25rem;
+        }
+      `}</style>
       <Head>
         <title>
           遥在科技-XR场景应用层技术平台与服务商，专注遥在技术，赋能虚拟现实+产业
@@ -27,6 +36,53 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <main className="relative top-0">
+        {/* 移动第一屏 */}
+        <section className="pt-24 2xl:hidden">
+          <div className="container">
+            <Swiper
+              pagination={true}
+              modules={[Pagination]}
+              className="mySwiper w-screen">
+              <SwiperSlide className="relative">
+                <Image
+                  src={'/home/bg_m_1_1.png'}
+                  alt=""
+                  height={0}
+                  width={0}
+                  className=" w-screen absolute"
+                />
+              </SwiperSlide>
+              <SwiperSlide className="relative">
+                <Image
+                  src={'/home/bg_m_1_2.png'}
+                  alt=""
+                  height={0}
+                  width={0}
+                  className=" w-screen absolute"
+                />
+              </SwiperSlide>
+              <SwiperSlide className="relative">
+                <Image
+                  src={'/home/bg_m_1_3.png'}
+                  alt=""
+                  height={0}
+                  width={0}
+                  className=" w-screen"
+                />
+              </SwiperSlide>
+              <SwiperSlide className="relative">
+                <Image
+                  src={'/home/bg_m_1_4.png'}
+                  alt=""
+                  height={0}
+                  width={0}
+                  className=" w-screen"
+                />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </section>
+        {/* PC第一屏 */}
         <section>
           <div className="container"></div>
         </section>
