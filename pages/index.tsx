@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <title>
           遥在科技-XR场景应用层技术平台与服务商，专注遥在技术，赋能虚拟现实+产业
         </title>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html;charset=utf-8" />
         <meta
           name="keywords"
           content="遥在科技，遥在技术，智慧文旅，元宇宙，文旅元宇宙，NeRF，VR，AR，XR，8K全景视频，全景直播，直播机，超高清低延迟，虚拟现实"
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="renderer" content="webkit" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
