@@ -72,4 +72,7 @@
   .menu-open {
     @apply translate-x-0;
   }
+  .switchBtnActive{
+    @apply text-xl bg-white bg-opacity-50 font-bold
+  }
 }

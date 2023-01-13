@@ -328,7 +328,7 @@ const Header: NextPage = () => {
               </span>
               {/* 软件技术与服务下拉 */}
               <div className="hidden absolute  -left-36 w-[600px] pt-5  cursor-default group-hover:flex ">
-                <div className="  text-[#333] border flex-col items-start  space-y-14 p-12 flex  ">
+                <div className="  bg-white text-[#333] border flex-col items-start  space-y-14 p-12 flex  ">
                   <div className=" flex items-center justify-start space-x-2">
                     <Image
                       src={'/navbar/rjjsyfw.png'}
@@ -434,7 +434,7 @@ const Header: NextPage = () => {
               </span>
               {/* 硬件产品下拉 */}
               <div className="hidden absolute -left-96 w-[900px] pt-5  cursor-default group-hover:flex ">
-                <div className=" text-[#333] border flex-col items-start  space-y-14 p-12 flex">
+                <div className="bg-white text-[#333] border flex-col items-start  space-y-14 p-12 flex">
                   <div className=" flex items-center justify-start space-x-2">
                     <Image
                       src={'/navbar/yjcp.png'}
@@ -519,7 +519,7 @@ const Header: NextPage = () => {
               </span>
               {/* 解决方案下拉 */}
               <div className="hidden absolute -left-[600px]  w-[1400px] pt-5  cursor-default group-hover:flex ">
-                <div className="  text-[#333] border flex-col items-start space-y-8 p-11 flex  ">
+                <div className=" bg-white text-[#333] border flex-col items-start space-y-8 p-11 flex  ">
                   <div className=" flex items-center justify-start space-x-2">
                     <Image
                       src={'/navbar/jjfa.png'}
@@ -882,7 +882,7 @@ const Header: NextPage = () => {
               </span>
               {/* 内容研发服务下拉 */}
               <div className=" hidden absolute -left-[600px] w-[1300px] pt-5  cursor-default group-hover:flex ">
-                <div className=" text-[#333] border flex-col items-start  space-y-14 p-12 flex">
+                <div className="bg-white text-[#333] border flex-col items-start  space-y-14 p-12 flex">
                   <div className=" flex items-center justify-start space-x-2">
                     <Image
                       src={'/navbar/nryffw.png'}
