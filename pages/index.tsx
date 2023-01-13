@@ -24,6 +24,7 @@ const Home: NextPage = () => {
       swiperRef.current?.slideTo(activeIndex, 500, false)
     }
   }, [activeIndex])
+  const [planActive, setPlanActive] = useState(0)
   return (
     <div>
       <style jsx global>{`
@@ -266,6 +267,107 @@ const Home: NextPage = () => {
             width={0}
             className=" 2xl:h-screen w-screen "
           />
+        </section>
+        {/* 第三屏 */}
+        <section>
+          <div
+            className="bg-cover px-8 py-9 bg-center bg-no-repeat h-auto 2xl:h-screen"
+            style={{
+              backgroundImage: `url('/home/bg_3.png')`,
+            }}>
+            <div className=" text-center text-white  text-xl">解决方案</div>
+            <div className=" overflow-hidden  w-full  overflow-x-scroll mt-5">
+              <div className="flex w-[600px] ">
+                <button
+                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
+                    planActive == 0 && 'bg-[#2f99fa]'
+                  }`}
+                  onClick={() => {
+                    setPlanActive(0)
+                  }}>
+                  <Image src={'/home/jypx.png'} alt="" height={30} width={30} />
+                  <div className="text-white text-sm">教育培训</div>
+                </button>
+                <button
+                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
+                    planActive == 1 && 'bg-[#2f99fa]'
+                  }`}
+                  onClick={() => {
+                    setPlanActive(1)
+                  }}>
+                  <Image src={'/home/whly.png'} alt="" height={30} width={30} />
+                  <div className="text-white text-sm">文化旅游</div>
+                </button>
+                <button
+                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
+                    planActive == 2 && 'bg-[#2f99fa]'
+                  }`}
+                  onClick={() => {
+                    setPlanActive(2)
+                  }}>
+                  <Image src={'/home/gysc.png'} alt="" height={30} width={30} />
+                  <div className="text-white text-sm">工业生产</div>
+                </button>
+                <button
+                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
+                    planActive == 3 && 'bg-[#2f99fa]'
+                  }`}
+                  onClick={() => {
+                    setPlanActive(3)
+                  }}>
+                  <Image src={'/home/tyjk.png'} alt="" height={30} width={30} />
+                  <div className="text-white text-sm">体育健康</div>
+                </button>
+                <button
+                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
+                    planActive == 4 && 'bg-[#2f99fa]'
+                  }`}
+                  onClick={() => {
+                    setPlanActive(4)
+                  }}>
+                  <Image src={'/home/smcy.png'} alt="" height={30} width={30} />
+                  <div className="text-white text-sm">商贸创意</div>
+                </button>
+                <button
+                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
+                    planActive == 5 && 'bg-[#2f99fa]'
+                  }`}
+                  onClick={() => {
+                    setPlanActive(5)
+                  }}>
+                  <Image src={'/home/yyyl.png'} alt="" height={30} width={30} />
+                  <div className="text-white text-sm">演艺娱乐</div>
+                </button>
+                <button
+                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
+                    planActive == 6 && 'bg-[#2f99fa]'
+                  }`}
+                  onClick={() => {
+                    setPlanActive(6)
+                  }}>
+                  <Image src={'/home/czfz.png'} alt="" height={30} width={30} />
+                  <div className="text-white text-sm">残障辅助</div>
+                </button>
+                <button
+                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
+                    planActive == 7 && 'bg-[#2f99fa]'
+                  }`}
+                  onClick={() => {
+                    setPlanActive(7)
+                  }}>
+                  <Image src={'/home/rhmt.png'} alt="" height={30} width={30} />
+                  <div className="text-white text-sm">融合媒体</div>
+                </button>
+              </div>
+            </div>
+            <div className="grid grid-cols-4">
+              <div className=""
+              style={{
+                backgroundImage: `url('/home/jypx_1.png')`,
+              }}
+              ></div>
+            </div>
+          </div>
         </section>
       </main>
       <Footer />
