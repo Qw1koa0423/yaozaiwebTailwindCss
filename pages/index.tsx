@@ -1,16 +1,26 @@
 import type { NextPage } from 'next'
+import { useRef } from 'react'
 import Header from '../components/Header'
 import Head from 'next/head'
-import { url } from 'inspector'
 import Footer from '../components/Footer'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper'
+import Image from 'next/image'
 const Home: NextPage = () => {
+  const sectionOneRef = useRef<HTMLDivElement>(null)
   return (
     <div>
+      <style jsx global>{`
+        span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+          width: 1.5rem;
+          border-radius: 0.25rem;
+        }
+      `}</style>
       <Head>
         <title>
           遥在科技-XR场景应用层技术平台与服务商，专注遥在技术，赋能虚拟现实+产业
         </title>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html;charset=utf-8" />
         <meta
           name="keywords"
           content="遥在科技，遥在技术，智慧文旅，元宇宙，文旅元宇宙，NeRF，VR，AR，XR，8K全景视频，全景直播，直播机，超高清低延迟，虚拟现实"
@@ -21,10 +31,62 @@ const Home: NextPage = () => {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="renderer" content="webkit" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <main className="relative top-0">
+        {/* 移动第一屏 */}
+        <section className="pt-24 2xl:hidden">
+          <div className="container">
+            <Swiper
+              pagination={true}
+              modules={[Pagination]}
+              className="mySwiper w-screen">
+              <SwiperSlide className="relative">
+                <Image
+                  src={'/home/bg_m_1_1.png'}
+                  alt=""
+                  height={0}
+                  width={0}
+                  className=" w-screen absolute"
+                />
+              </SwiperSlide>
+              <SwiperSlide className="relative">
+                <Image
+                  src={'/home/bg_m_1_2.png'}
+                  alt=""
+                  height={0}
+                  width={0}
+                  className=" w-screen absolute"
+                />
+              </SwiperSlide>
+              <SwiperSlide className="relative">
+                <Image
+                  src={'/home/bg_m_1_3.png'}
+                  alt=""
+                  height={0}
+                  width={0}
+                  className=" w-screen"
+                />
+              </SwiperSlide>
+              <SwiperSlide className="relative">
+                <Image
+                  src={'/home/bg_m_1_4.png'}
+                  alt=""
+                  height={0}
+                  width={0}
+                  className=" w-screen"
+                />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </section>
+        {/* PC第一屏 */}
+        <section>
+          <div className="container"></div>
+        </section>
+      </main>
       <Footer />
     </div>
   )
