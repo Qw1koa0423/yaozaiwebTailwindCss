@@ -319,9 +319,8 @@ const Header: NextPage = () => {
               className="link relative transition-colors hover:text-blue-400">
               首页
             </Link>
-            <Link
-              href={''}
-              className="link relative transition-colors hover:text-blue-400 group">
+            {/* 软件技术与服务 */}
+            <div className="link relative transition-colors cursor-pointer  hover:text-blue-400 group">
               软件技术&服务
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
@@ -425,21 +424,21 @@ const Header: NextPage = () => {
                   </div>
                 </div>
               </div>
-            </Link>
-            <Link
-              href={'/'}
-              className="link relative transition-colors hover:text-blue-400 group">
+            </div>
+            {/* 硬件产品 */}
+            <div className="link relative transition-colors cursor-pointer hover:text-blue-400 group">
               硬件产品
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
-              <div className="hidden absolute  -left-96 w-[1200px] pt-5  cursor-default group-hover:flex ">
+              {/* 硬件产品下拉 */}
+              <div className="hidden absolute -left-96 w-[900px] pt-5  cursor-default group-hover:flex ">
                 <div className=" text-[#333] border flex-col items-start  space-y-14 p-12 flex">
                   <div className=" flex items-center justify-start space-x-2">
                     <Image
                       src={'/navbar/yjcp.png'}
-                      alt="软件技术与服务"
+                      alt="硬件产品"
                       width={34}
                       height={32}
                       className="translate-y-0.5"
@@ -447,108 +446,547 @@ const Header: NextPage = () => {
                     <span className=" font-bold text-4xl">硬件产品</span>
                   </div>
                   <div className=" flex items-center justify-center space-x-12">
-                    <Link
-                      href={'/'}
-                      className=" flex flex-col space-y-0.5 items-center justify-center">
-                      <div className="h-44 flex items-center justify-center">
+                    <div className=" flex flex-col items-center justify-center space-y-2">
+                      <div className=" h-44 flex items-center">
                         <Image
                           src={'/navbar/tprobot.png'}
-                          alt="TP Robot"
                           width={76}
                           height={148}
+                          alt="TP Robot"
                         />
                       </div>
-                      <div className=" link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                      <Link
+                        href={'/'}
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
                         TP Robot
-                      </div>
-                    </Link>
-                    <Link
-                      href={'/'}
-                      className=" flex flex-col space-y-0.5 items-center justify-center">
-                      <div className="h-44 flex items-center justify-center">
+                      </Link>
+                    </div>
+                    <div className=" flex flex-col items-center justify-center space-y-2">
+                      <div className=" h-44 flex items-center">
                         <Image
-                          src={'/navbar/tprobot.png'}
-                          alt="TP Robot"
-                          width={76}
-                          height={148}
+                          src={'/navbar/tpc100.png'}
+                          width={202}
+                          height={162}
+                          alt="TP C100"
                         />
                       </div>
-                      <div className=" link relative transition-colors font-normal text-2xl hover:text-blue-400">
-                        TP Robot
-                      </div>
-                    </Link>
-                    <Link
-                      href={'/'}
-                      className=" flex flex-col space-y-0.5 items-center justify-center">
-                      <div className="h-44 flex items-center justify-center ">
+                      <Link
+                        href={'/'}
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        TP C100
+                      </Link>
+                    </div>
+                    <div className=" flex flex-col items-center justify-center space-y-2">
+                      <div className=" h-44 flex items-center">
                         <Image
-                          src={'/navbar/tprobot.png'}
-                          alt="TP Robot"
-                          width={76}
-                          height={148}
+                          src={'/navbar/tpc300.png'}
+                          width={120}
+                          height={160}
+                          alt="TP C300"
                         />
                       </div>
-                      <div className=" link relative transition-colors font-normal text-2xl hover:text-blue-400">
-                        TP Robot
-                      </div>
-                    </Link>
-                    <Link
-                      href={'/'}
-                      className=" flex flex-col space-y-0.5 items-center justify-center">
-                      <div className="h-44 flex items-center justify-center">
+                      <Link
+                        href={'/'}
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        TP C300
+                      </Link>
+                    </div>
+                    <div className=" flex flex-col items-center justify-center space-y-2">
+                      <div className=" h-44 flex items-center">
                         <Image
-                          src={'/navbar/tprobot.png'}
-                          alt="TP Robot"
-                          width={76}
-                          height={148}
+                          src={'/navbar/tpsjhdcjmz.png'}
+                          width={185}
+                          height={160}
+                          alt="TP 视觉互动采集模组"
                         />
                       </div>
-                      <div className=" link relative transition-colors font-normal text-2xl hover:text-blue-400">
-                        TP Robot
-                      </div>
-                    </Link>
+                      <Link
+                        href={'/'}
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        TP 视觉互动采集模组
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </Link>
-            <Link
-              href={'/'}
-              className="link relative transition-colors hover:text-blue-400 group">
+            </div>
+            {/* 解决方案 */}
+            <div className="link relative transition-colors hover:text-blue-400 group">
               解决方案
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
-              <div className="hidden absolute  -left-36 w-[600px] pt-5  cursor-default group-hover:flex "></div>
-            </Link>
-            <Link
-              href={'/'}
-              className="link relative transition-colors hover:text-blue-400 group">
+              {/* 解决方案下拉 */}
+              <div className="hidden absolute -left-[600px]  w-[1400px] pt-5  cursor-default group-hover:flex ">
+                <div className="  text-[#333] border flex-col items-start space-y-8 p-11 flex  ">
+                  <div className=" flex items-center justify-start space-x-2">
+                    <Image
+                      src={'/navbar/jjfa.png'}
+                      alt="解决方案"
+                      width={36}
+                      height={32}
+                      className="translate-y-0.5"
+                    />
+                    <span className=" font-bold text-4xl">解决方案</span>
+                  </div>
+                  <div className=" grid grid-cols-10 gap-6">
+                    <div className=" flex flex-col items-center justify-start space-y-5 col-span-2">
+                      <div className=" flex items-center h-40">
+                        <Image
+                          src={'/navbar/jypx.png'}
+                          alt="教育培训"
+                          height={142}
+                          width={178}
+                        />
+                      </div>
+                      <div className=" text-2xl font-normal">教育培训</div>
+                      <div className=" flex flex-col space-y-8">
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            遥在远程教学平台
+                          </Link>
+                        </div>
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            遥在旅游专业实训平台
+                          </Link>
+                        </div>
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            XR实训教室
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className=" flex flex-col items-center justify-start space-y-5 col-span-2">
+                      <div className=" flex items-center h-40">
+                        <Image
+                          src={'/navbar/whly.png'}
+                          alt="文化旅游"
+                          height={131}
+                          width={143}
+                        />
+                      </div>
+                      <div className=" text-2xl font-normal">文化旅游</div>
+                      <div className=" flex flex-col space-y-8">
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            山东文旅元宇宙平台
+                          </Link>
+                        </div>
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            山东文旅数字场景化平台
+                          </Link>
+                        </div>
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            遥在远程祈福平台
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className=" flex flex-col items-center justify-start space-y-5 col-span-2">
+                      <div className=" flex items-center h-40">
+                        <Image
+                          src={'/navbar/gysc.png'}
+                          alt="工业生产"
+                          height={143}
+                          width={147}
+                        />
+                      </div>
+                      <div className=" text-2xl font-normal">工业生产</div>
+                      <div className=" flex flex-col space-y-8">
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            数字孪生工厂
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className=" flex flex-col items-center justify-start space-y-5 col-span-2">
+                      <div className=" flex items-center h-40">
+                        <Image
+                          src={'/navbar/tyjk.png'}
+                          alt="体育健康"
+                          height={140}
+                          width={174}
+                        />
+                      </div>
+                      <div className=" text-2xl font-normal">体育健康</div>
+                      <div className=" flex flex-col space-y-8">
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            自由视角体育拍摄
+                          </Link>
+                        </div>
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            全景赛事直播
+                          </Link>
+                        </div>
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            沉浸式心理健康诊疗平台
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className=" flex flex-col items-center justify-start space-y-5 col-span-2">
+                      <div className=" flex items-center h-40">
+                        <Image
+                          src={'/navbar/yyyl.png'}
+                          alt="演艺娱乐"
+                          height={119}
+                          width={200}
+                        />
+                      </div>
+                      <div className=" text-2xl font-normal">演艺娱乐</div>
+                      <div className=" flex flex-col space-y-8">
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            自由视角演绎拍摄
+                          </Link>
+                        </div>
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            全景演艺直播
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className=" flex flex-col items-center justify-start space-y-5 col-span-2">
+                      <div className=" flex items-center h-40">
+                        <Image
+                          src={'/navbar/czfz.png'}
+                          alt="残障辅助"
+                          height={149}
+                          width={200}
+                        />
+                      </div>
+                      <div className=" text-2xl font-normal">残障辅助</div>
+                      <div className=" flex flex-col space-y-8">
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            残障人士远程体验平台
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className=" flex flex-col items-center justify-start space-y-5 col-span-3">
+                      <div className=" flex items-center h-40 ">
+                        <Image
+                          src={'/navbar/smcy.png'}
+                          alt="商贸创意"
+                          height={144}
+                          width={198}
+                        />
+                      </div>
+                      <div className=" text-2xl font-normal">商贸创意</div>
+                      <div className=" flex flex-col space-y-8">
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            遥在远程逛展平台
+                          </Link>
+                        </div>
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400 ">
+                            遥在沉浸式跨境直播带货解决方案
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className=" flex flex-col items-center justify-start space-y-5 col-span-2">
+                      <div className=" flex items-center h-40">
+                        <Image
+                          src={'/navbar/aqyj.png'}
+                          alt="安全应急"
+                          height={114}
+                          width={200}
+                        />
+                      </div>
+                      <div className=" text-2xl font-normal">安全应急</div>
+                      <div className=" flex flex-col space-y-8">
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400 whitespace-nowrap">
+                            特种行业远程应急及实训平台
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className=" flex flex-col items-center justify-start space-y-5 col-span-3">
+                      <div className=" flex items-center h-40">
+                        <Image
+                          src={'/navbar/rhmt.png'}
+                          alt="融合媒体"
+                          height={139}
+                          width={200}
+                        />
+                      </div>
+                      <div className=" text-2xl font-normal">融合媒体</div>
+                      <div className=" flex flex-col space-y-8">
+                        <div className="flex space-x-3 items-center">
+                          <Image
+                            src={'/navbar/shu.png'}
+                            alt=""
+                            width={4}
+                            height={25}
+                          />
+                          <Link
+                            href={'/'}
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400 ">
+                            遥在超高清低延迟视频解决方案
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* 内容研发服务 */}
+            <div className="link relative transition-colors hover:text-blue-400 group">
               内容研发服务
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
-              <div className="hidden absolute  -left-36 w-[600px] pt-5  cursor-default group-hover:flex "></div>
-            </Link>
-            <Link
-              href={'/'}
-              className="link relative transition-colors hover:text-blue-400 group">
+              {/* 内容研发服务下拉 */}
+              <div className=" hidden absolute -left-[600px] w-[1300px] pt-5  cursor-default group-hover:flex ">
+                <div className=" text-[#333] border flex-col items-start  space-y-14 p-12 flex">
+                  <div className=" flex items-center justify-start space-x-2">
+                    <Image
+                      src={'/navbar/nryffw.png'}
+                      alt="内容研发服务"
+                      width={34}
+                      height={32}
+                      className="translate-y-0.5"
+                    />
+                    <span className=" font-bold text-4xl">内容研发服务</span>
+                  </div>
+                  <div className=" flex items-center justify-center space-x-12">
+                    <div className=" flex flex-col items-center justify-center space-y-2">
+                      <div className=" h-40 flex items-center">
+                        <Image
+                          src={'/navbar/3dqjzb.png'}
+                          width={200}
+                          height={143}
+                          alt="3D 全景直播"
+                        />
+                      </div>
+                      <Link
+                        href={'/'}
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        3D 全景直播
+                      </Link>
+                    </div>
+                    <div className=" flex flex-col items-center justify-center space-y-2">
+                      <div className=" h-40 flex items-center">
+                        <Image
+                          src={'/navbar/qjnr.png'}
+                          width={200}
+                          height={124}
+                          alt="全景内容"
+                        />
+                      </div>
+                      <Link
+                        href={'/'}
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        全景内容
+                      </Link>
+                    </div>
+                    <div className=" flex flex-col items-center justify-center space-y-2">
+                      <div className=" h-40 flex items-center">
+                        <Image
+                          src={'/navbar/zysjzb.png'}
+                          width={218}
+                          height={125}
+                          alt="自由视角直播"
+                        />
+                      </div>
+                      <Link
+                        href={'/'}
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        自由视角直播
+                      </Link>
+                    </div>
+                    <div className=" flex flex-col items-center justify-center space-y-2">
+                      <div className=" h-40 flex items-center">
+                        <Image
+                          src={'/navbar/xnfzyszls.png'}
+                          width={200}
+                          height={156}
+                          alt="虚拟仿真与数字孪生"
+                        />
+                      </div>
+                      <Link
+                        href={'/'}
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        虚拟仿真与数字孪生
+                      </Link>
+                    </div>
+                    <div className=" flex flex-col items-center justify-center space-y-2">
+                      <div className=" h-40 flex items-center">
+                        <Image
+                          src={'/navbar/nerfjm.png'}
+                          width={168}
+                          height={159}
+                          alt="NeRF建模"
+                        />
+                      </div>
+                      <Link
+                        href={'/'}
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        NeRF建模
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="link relative transition-colors hover:text-blue-400 group">
               服务支持
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
-            </Link>
-            <Link
-              href={'/'}
-              className="link relative transition-colors hover:text-blue-400 group">
+            </div>
+            <div className="link relative transition-colors hover:text-blue-400 group">
               关于我们
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
-            </Link>
+            </div>
           </div>
         </div>
         <button
