@@ -270,7 +270,7 @@ const Home: NextPage = () => {
         </section>
         {/* 第三屏 */}
         <section>
-          <div
+        <div
             className="bg-cover px-8 py-9 bg-center bg-no-repeat h-auto 2xl:h-screen"
             style={{
               backgroundImage: `url('/home/bg_3.png')`,
@@ -366,6 +366,30 @@ const Home: NextPage = () => {
                 backgroundImage: `url('/home/jypx_1.png')`,
               }}
               ></div>
+            </div>
+          </div>
+        </section>
+        {/* 移动第六屏 */}
+        <section>
+          <div className="container bg-[#FBFCFF]">
+            <div className="text-xl text-center font-[500] pt-9 mb-8">
+              虚拟现实+产业
+            </div>
+            <div className="relative flex justify-center items-center bg-[url('../public/home/bg_5.png')]">
+                {/* <Image
+                  src={'/home/bg_5.png'}
+                  alt=""
+                  height={0}
+                  width={0}
+                  className=" w-screen"
+                /> */}
+                <Image
+                  src={'/home/map.png'}
+                  alt=""
+                  height={0}
+                  width={0}
+                  className=" w-24"
+                />
             </div>
           </div>
         </section>
