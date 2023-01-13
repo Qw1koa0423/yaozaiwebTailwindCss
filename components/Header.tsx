@@ -270,8 +270,8 @@ const Header: NextPage = () => {
             key={index}
             className={
               list.btn
-                ? 'flex justify-between items-center text-base text-gray-500'
-                : 'flex justify-between text-3xl items-center'
+                ? 'flex justify-between items-center text-xs text-gray-500'
+                : 'flex justify-between text-base items-center'
             }
             onClick={() => {
               if (!item.href && list.menu) {
@@ -285,7 +285,7 @@ const Header: NextPage = () => {
                 alt=""
                 height={0}
                 width={0}
-                className=" w-5"
+                className=" w-2"
               />
             )}
           </Link>
@@ -300,7 +300,7 @@ const Header: NextPage = () => {
     }
   }
   return (
-    <div className="fixed w-full bg-white px-14 py-5 mx-auto z-20 2xl:pl-64 2xl:pr-0 2xl:py-3">
+    <div className="fixed w-full bg-white px-6 py-2 mx-auto z-20 2xl:pl-64 2xl:pr-0 2xl:py-3">
       {/* 导航栏 */}
       <nav className=" flex items-center justify-between relative">
         <div className=" flex items-center space-x-11">
@@ -310,7 +310,7 @@ const Header: NextPage = () => {
             alt="遥在科技"
             height={0}
             width={0}
-            className=" h-14 w-auto cursor-pointer"
+            className=" h-7 w-auto cursor-pointer 2xl:h-14"
           />
           {/* 导航栏菜单-pc */}
           <div className=" hidden space-x-14 2xl:flex">
@@ -1007,11 +1007,11 @@ const Header: NextPage = () => {
       </nav>
       {/* 导航栏菜单-mobile */}
       <div
-        className="fixed top-0 right-0 w-1/2 h-full  bg-white z-30 translate-x-full transition-transform duration-500 ease-in-out px-6"
+        className="fixed top-0 right-0 w-1/2 h-full  bg-white z-30 translate-x-full transition-transform duration-500 ease-in-out px-3"
         ref={menuRef}>
         {menuList.btn && (
           <button
-            className=" absolute top-8 flex space-x-1 items-center"
+            className=" absolute top-2 flex space-x-0.5 items-center text-base"
             onClick={() => {
               if (menuList.btn == '全部') {
                 setMenuList(menus)
@@ -1024,14 +1024,14 @@ const Header: NextPage = () => {
               alt=""
               height={0}
               width={0}
-              className=" w-4 text-base"
+              className=" w-4"
             />
             <span>{menuList.btn}</span>
           </button>
         )}
-        <div className="flex flex-col space-y-5 mt-24">
+        <div className="flex flex-col space-y-2 mt-12">
           {menuList.name && (
-            <div className=" text-2xl font-medium">{menuList.name}</div>
+            <div className=" text-base font-medium">{menuList.name}</div>
           )}
           {loadMenu(menuList)}
         </div>

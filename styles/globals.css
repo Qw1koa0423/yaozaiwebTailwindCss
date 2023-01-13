@@ -25,8 +25,8 @@
   }
   .hamburger {
     cursor: pointer;
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 12px;
     transition: all 0.25s;
     position: relative;
     z-index: 100;
@@ -36,8 +36,8 @@
   .hamburger-bottom {
     content: '';
     position: absolute;
-    width: 24px;
-    height: 2px;
+    width: 12px;
+    height: 1px;
     top: 0;
     left: 0;
     background: #333;
@@ -46,11 +46,11 @@
   }
 
   .hamburger-middle {
-    transform: translateY(7px);
+    transform: translateY(3.5px);
   }
 
   .hamburger-bottom {
-    transform: translateY(14px);
+    transform: translateY(7px);
   }
 
   .munuBtn-open {
@@ -59,7 +59,7 @@
   }
 
   .munuBtn-open .hamburger-top {
-    transform: rotate(45deg) translateY(6px) translateX(6px);
+    transform: rotate(45deg) translateY(3px) translateX(3px);
   }
 
   .munuBtn-open .hamburger-middle {
@@ -67,7 +67,7 @@
   }
 
   .munuBtn-open .hamburger-bottom {
-    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+    transform: rotate(-45deg) translateY(3px) translateX(-3px);
   }
   .menu-open {
     @apply translate-x-0;
