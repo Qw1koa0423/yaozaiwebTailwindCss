@@ -84,7 +84,31 @@ const Home: NextPage = () => {
         </section>
         {/* PC第一屏 */}
         <section>
-          <div className="container"></div>
+          <div className="pt-24"></div>
+        </section>
+        {/* 移动第六屏 */}
+        <section>
+          <div className="container bg-[#FBFCFF]">
+            <div className="text-xl text-center font-[500] pt-9 mb-8">
+              虚拟现实+产业
+            </div>
+            <div className="relative flex justify-center items-center bg-[url('../public/home/bg_5.png')]">
+                {/* <Image
+                  src={'/home/bg_5.png'}
+                  alt=""
+                  height={0}
+                  width={0}
+                  className=" w-screen"
+                /> */}
+                <Image
+                  src={'/home/map.png'}
+                  alt=""
+                  height={0}
+                  width={0}
+                  className=" w-24"
+                />
+            </div>
+          </div>
         </section>
       </main>
       <Footer />
