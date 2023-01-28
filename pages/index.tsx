@@ -727,6 +727,142 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
+        {/* 第四屏 */}
+        <section>
+          <div className=" bg-white w-full mb-10 2xl:mb-24">
+            <div className=" text-center mt-10 text-lg font-medium 2xl:mt-20 2xl:text-3xl">
+              硬件产品
+            </div>
+            <div className="flex flex-col items-center justify-center mt-4 space-y-4 2xl:flex-row 2xl:space-y-0 2xl:mt-24">
+              <div
+                className=" bg-center bg-cover bg-no-repeat w-80 h-40 rounded-2xl relative 2xl:w-72 2xl:h-52 2xl:hover:h-56 2xl:hover:-translate-y-4 2xl:transition-all 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                style={{
+                  backgroundImage: `url(/home/yj_bg1.png)`,
+                }}>
+                <div
+                  style={{
+                    backgroundImage: `url(/home/yj_1.png)`,
+                  }}
+                  className="absolute bottom-0 right-0 w-56 h-full bg-contain bg-center bg-no-repeat 2xl:w-full"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white font-bold text-xl text-center">
+                  <div className="2xl:text-2xl">TP C300</div>
+                  <div className="2xl:text-sm 2xl:font-normal mt-3">
+                    720°全景相机
+                  </div>
+                </div>
+              </div>
+              <div
+                className=" bg-center bg-cover bg-no-repeat w-80 h-40 rounded-2xl relative 2xl:w-72 2xl:h-52 2xl:hover:h-56 2xl:hover:-translate-y-4 2xl:transition-all 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                style={{
+                  backgroundImage: `url(/home/yj_bg2.png)`,
+                }}>
+                <div
+                  style={{
+                    backgroundImage: `url(/home/yj_2.png)`,
+                  }}
+                  className=" absolute -bottom-1 right-10 w-20 h-full bg-contain bg-center bg-no-repeat 2xl:w-24 2xl:right-1"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white font-bold text-xl text-center">
+                  <div className="2xl:text-2xl">TP Robot</div>
+                  <div className="2xl:text-sm 2xl:font-normal mt-3">
+                    遥在机器人
+                  </div>
+                </div>
+              </div>
+              <div
+                className=" bg-center bg-cover bg-no-repeat w-80 h-40 rounded-2xl relative 2xl:w-72 2xl:h-52 2xl:hover:h-56 2xl:hover:-translate-y-4 2xl:transition-all 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                style={{
+                  backgroundImage: `url(/home/yj_bg3.png)`,
+                }}>
+                <div
+                  style={{
+                    backgroundImage: `url(/home/yj_3.png)`,
+                  }}
+                  className=" absolute bottom-0 right-6 w-40 h-full  bg-contain bg-center bg-no-repeat 2xl:w-56 2xl:right-0"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white font-bold text-xl text-center">
+                  <div className="2xl:text-2xl">TP C100</div>
+                  <div className="2xl:text-sm 2xl:font-normal mt-3">
+                    180°3D全景相机
+                  </div>
+                </div>
+              </div>
+              <div
+                className=" bg-center bg-cover bg-no-repeat w-80 h-40 rounded-2xl relative 2xl:w-72 2xl:h-52 2xl:hover:h-56 2xl:hover:-translate-y-4 2xl:transition-all 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                style={{
+                  backgroundImage: `url(/home/yj_bg4.png)`,
+                }}>
+                <div
+                  style={{
+                    backgroundImage: `url(/home/yj_4.png)`,
+                  }}
+                  className="absolute bottom-0 right-10 w-32 h-full  bg-contain bg-center bg-no-repeat 2xl:w-48"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white font-bold text-xl text-center">
+                  <div className="2xl:text-2xl">TP 视觉互动</div>
+                  <div className="2xl:text-2xl mt-3">采集模组</div>
+                </div>
+              </div>
+            </div>
+            <div className="flex w-[600px] 2xl:w-[1200px] mx-auto mt-5 2xl:mt-10 overflow-hidden">
+              <div className=" flex  space-x-10 2xl:space-x-36 animate-scroll_mobile  2xl:animate-scroll hover:paused items-center">
+                <Image
+                  src="/navbar/logo_black.png"
+                  alt="遥在科技"
+                  height={0}
+                  width={0}
+                  className=" hover:cursor-pointer w-[156px] h-[55px]"
+                />
+                <Image
+                  src="/home/sddx.png"
+                  width={0}
+                  height={0}
+                  alt="山东大学"
+                  className=" hover:cursor-pointer w-[128px] h-[39px]"
+                />
+                <Image
+                  src="/home/sdyyjt.png"
+                  width={0}
+                  height={0}
+                  alt="山东产业技术研究院"
+                  className=" hover:cursor-pointer w-[151px] h-[41px]"
+                />
+                <Image
+                  src="/home/sdcyyjy.png"
+                  width={0}
+                  height={0}
+                  alt="山东演艺集团"
+                  className=" hover:cursor-pointer w-[201px] h-[40px]"
+                />
+                <Image
+                  src="/navbar/logo_black.png"
+                  alt="遥在科技"
+                  height={0}
+                  width={0}
+                  className=" hover:cursor-pointer w-[156px] h-[55px]"
+                />
+                <Image
+                  src="/home/sddx.png"
+                  width={0}
+                  height={0}
+                  alt="山东大学"
+                  className=" hover:cursor-pointer w-[128px] h-[39px]"
+                />
+                <Image
+                  src="/home/sdyyjt.png"
+                  width={0}
+                  height={0}
+                  alt="山东产业技术研究院"
+                  className=" hover:cursor-pointer w-[151px] h-[41px]"
+                />
+                <Image
+                  src="/home/sdcyyjy.png"
+                  width={0}
+                  height={0}
+                  alt="山东演艺集团"
+                  className=" hover:cursor-pointer w-[201px] h-[40px]"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
         {/* 移动第六屏 */}
         <section>
           <div className="container bg-[#FBFCFF]">

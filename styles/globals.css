@@ -75,4 +75,7 @@
   .switchBtnActive {
     @apply text-xl bg-white bg-opacity-50 font-bold;
   }
+  .paused {
+    animation-play-state: paused;
+  }
 }
