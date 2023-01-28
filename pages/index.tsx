@@ -729,11 +729,11 @@ const Home: NextPage = () => {
         </section>
         {/* 第四屏 */}
         <section>
-          <div className=" bg-white w-full  mb-5 2xl:mb-24">
+          <div className=" bg-white w-full  mb-5 2xl:mb-24 ">
             <div className=" text-center mt-10 text-lg font-medium 2xl:mt-20 2xl:text-3xl">
               硬件产品
             </div>
-            <div className="flex flex-col items-center justify-center mt-4 space-y-4 2xl:flex-row 2xl:space-y-0 2xl:mt-24">
+            <div className="flex flex-col items-center justify-center mt-4 space-y-4 2xl:flex-row 2xl:space-y-0 2xl:mt-24 h-56">
               <div
                 className=" bg-center bg-cover bg-no-repeat w-80 h-40 rounded-2xl relative 2xl:w-72 2xl:h-52 2xl:hover:h-56 2xl:hover:-translate-y-4 2xl:transition-all 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
                 style={{
@@ -801,7 +801,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="flex w-[600px] 2xl:w-[1200px] mx-auto mt-5 2xl:mt-10 overflow-hidden">
+            <div className="flex w-[600px] max-w-full 2xl:w-[1200px] mx-auto mt-5 2xl:mt-10 overflow-hidden">
               <div className=" flex  space-x-10 2xl:space-x-36 animate-scroll_mobile  2xl:animate-scroll hover:paused items-center">
                 <Image
                   src="/navbar/logo_black.png"
@@ -886,26 +886,307 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        {/* 移动第六屏 */}
+        {/* 第六屏 */}
         <section>
-          <div className="container bg-[#FBFCFF]">
-            <div className="text-xl text-center font-[500] pt-9 mb-8">
+          <div className=" bg-[#FBFCFF] 2xl:hidden">
+            <div className="text-xl text-center font-medium pt-9">
               虚拟现实+产业
             </div>
-            <div className="relative flex justify-center items-center bg-[url('../public/home/bg_5.png')]">
-              {/* <Image
-                  src={'/home/bg_5.png'}
-                  alt=""
-                  height={0}
-                  width={0}
-                  className=" w-screen"
-                /> */}
+            <div
+              className=" bg-cover bg-center bg-no-repeat h-[489px]  flex items-center justify-center"
+              style={{
+                backgroundImage: `url(/home/bg_m_5.png)`,
+              }}>
+              <div
+                className=" bg-center bg-contain bg-no-repeat w-24 h-24 relative"
+                style={{
+                  backgroundImage: `url(/home/map.png)`,
+                }}>
+                <div
+                  className=" absolute w-14 h-14 flex items-center justify-center text-xs bg-contain bg-no-repeat bg-center -top-full left-1/2 -translate-x-1/2"
+                  style={{
+                    backgroundImage: `url(/home/ty.png)`,
+                  }}>
+                  教育
+                  <br />
+                  培训
+                </div>
+                <div
+                  className="absolute w-14 h-14 flex items-center justify-center  text-xs bg-contain bg-no-repeat bg-center -top-[70%] -right-[60%] "
+                  style={{
+                    backgroundImage: `url(/home/ty.png)`,
+                  }}>
+                  文化
+                  <br />
+                  旅游
+                </div>
+                <div
+                  className="absolute w-14 h-14 flex items-center justify-center  text-xs bg-contain bg-no-repeat bg-center -top-[0%] -right-full"
+                  style={{
+                    backgroundImage: `url(/home/ty.png)`,
+                  }}>
+                  工业
+                  <br />
+                  生产
+                </div>
+                <div
+                  className="absolute w-14 h-14 flex items-center justify-center  text-xs bg-contain bg-no-repeat bg-center -bottom-[40%] -right-[90%]"
+                  style={{
+                    backgroundImage: `url(/home/ty.png)`,
+                  }}>
+                  体育
+                  <br />
+                  健康
+                </div>
+                <div
+                  className="absolute w-14 h-14 flex items-center justify-center  text-xs bg-contain bg-no-repeat bg-center -bottom-[90%] -right-[20%]"
+                  style={{
+                    backgroundImage: `url(/home/ty.png)`,
+                  }}>
+                  融合
+                  <br />
+                  媒体
+                </div>
+                <div
+                  className="absolute w-14 h-14 flex items-center justify-center  text-xs bg-contain bg-no-repeat bg-center  -bottom-[90%] -left-[18%]"
+                  style={{
+                    backgroundImage: `url(/home/ty.png)`,
+                  }}>
+                  商贸
+                  <br />
+                  创意
+                </div>
+                <div
+                  className="absolute w-14 h-14 flex items-center justify-center  text-xs bg-contain bg-no-repeat bg-center -bottom-[40%] -left-[90%]"
+                  style={{
+                    backgroundImage: `url(/home/ty.png)`,
+                  }}>
+                  安全
+                  <br />
+                  应急
+                </div>
+                <div
+                  className="absolute w-14 h-14 flex items-center justify-center  text-xs bg-contain bg-no-repeat bg-center -top-[0%] -left-full"
+                  style={{
+                    backgroundImage: `url(/home/ty.png)`,
+                  }}>
+                  残障
+                  <br />
+                  辅助
+                </div>
+                <div
+                  className="absolute w-14 h-14 flex items-center justify-center  text-xs bg-contain bg-no-repeat bg-center -top-[70%] -left-[60%]"
+                  style={{
+                    backgroundImage: `url(/home/ty.png)`,
+                  }}>
+                  演艺
+                  <br />
+                  娱乐
+                </div>
+              </div>
+            </div>
+            <div className=" grid grid-cols-2 gap-2">
               <Image
-                src={'/home/map.png'}
                 alt=""
-                height={0}
-                width={0}
-                className=" w-24"
+                width={236}
+                height={96}
+                src="/home/logo_sddx.png"
+                className=" col-span-1"
+              />
+              <Image
+                alt=""
+                width={236}
+                height={96}
+                src="/home/logo_sdqnzzxy.png"
+                className=" col-span-1"
+              />
+              <Image
+                width={236}
+                height={96}
+                alt=""
+                className=" col-span-1"
+                src="/home/logo_sdyyjt.png"
+              />
+              <Image
+                width={236}
+                height={96}
+                alt=""
+                className=" col-span-1"
+                src="/home/logo_sdlyxy.png"
+              />
+              <Image
+                width={236}
+                height={96}
+                alt=""
+                className=" col-span-1"
+                src="/home/logo_sdcyyjy.png"
+              />
+              <Image width={236} height={96} alt="" src="/home/logo_wjt.png" />
+              <Image
+                width={236}
+                height={96}
+                alt=""
+                src="/home/logo_lc.png"
+                className=" col-span-1"
+              />
+              <Image
+                width={236}
+                height={96}
+                alt=""
+                className=" col-span-1"
+                src="/home/logo_jndx.png"
+              />
+            </div>
+          </div>
+          <div
+            className="hidden 2xl:flex bg-cover bg-no-repeat bg-center w-full h-[887px]  justify-center items-center"
+            style={{
+              backgroundImage: `url(/home/bg_5.png)`,
+            }}>
+            <div
+              className=" bg-center bg-contain bg-no-repeat w-72 h-72 relative "
+              style={{
+                backgroundImage: `url(/home/map.png)`,
+              }}>
+              <div className=" absolute -top-[80%] left-1/2 -translate-x-1/2 text-3xl text-center w-64">
+                虚拟现实+产业
+              </div>
+              <div
+                className=" absolute w-20 h-20 flex items-center justify-center text-base bg-contain bg-no-repeat bg-center -top-[120px] left-1/2 -translate-x-1/2  cursor-pointer"
+                style={{
+                  backgroundImage: `url(/home/ty.png)`,
+                }}>
+                教育
+                <br />
+                培训
+              </div>
+              <div
+                className="absolute w-20 h-20 flex items-center justify-center  text-base bg-contain bg-no-repeat bg-center -top-[60px] left-[280px] cursor-pointer"
+                style={{
+                  backgroundImage: `url(/home/ty.png)`,
+                }}>
+                文化
+                <br />
+                旅游
+              </div>
+              <div
+                className="absolute w-20 h-20 flex items-center justify-center  text-base bg-contain bg-no-repeat bg-center top-[80px] left-[350px] cursor-pointer"
+                style={{
+                  backgroundImage: `url(/home/ty.png)`,
+                }}>
+                工业
+                <br />
+                生产
+              </div>
+              <div
+                className="absolute w-20 h-20 flex items-center justify-center  text-base bg-contain bg-no-repeat bg-center top-[220px] left-[320px] cursor-pointer"
+                style={{
+                  backgroundImage: `url(/home/ty.png)`,
+                }}>
+                体育
+                <br />
+                健康
+              </div>
+              <div
+                className="absolute w-20 h-20 flex items-center justify-center text-base bg-contain bg-no-repeat bg-center top-[330px] left-[195px] cursor-pointer"
+                style={{
+                  backgroundImage: `url(/home/ty.png)`,
+                }}>
+                融合
+                <br />
+                媒体
+              </div>
+              <div
+                className="absolute w-20 h-20 flex items-center justify-center text-base bg-contain bg-no-repeat bg-center  top-[330px] left-[25px] cursor-pointer"
+                style={{
+                  backgroundImage: `url(/home/ty.png)`,
+                }}>
+                商贸
+                <br />
+                创意
+              </div>
+              <div
+                className="absolute w-20 h-20 flex items-center justify-center  text-base bg-contain bg-no-repeat bg-center top-[220px] left-[-100px] cursor-pointer"
+                style={{
+                  backgroundImage: `url(/home/ty.png)`,
+                }}>
+                安全
+                <br />
+                应急
+              </div>
+              <div
+                className="absolute w-20 h-20 flex items-center justify-center text-base bg-contain bg-no-repeat bg-center top-[80px] -left-[130px] cursor-pointer"
+                style={{
+                  backgroundImage: `url(/home/ty.png)`,
+                }}>
+                残障
+                <br />
+                辅助
+              </div>
+              <div
+                className="absolute w-20 h-20 flex items-center justify-center  text-base bg-contain bg-no-repeat bg-center -top-[60px] left-[-70px] cursor-pointer"
+                style={{
+                  backgroundImage: `url(/home/ty.png)`,
+                }}>
+                演艺
+                <br />
+                娱乐
+              </div>
+              <Image
+                alt="山东大学"
+                width={236}
+                height={96}
+                src="/home/logo_sddx.png"
+                className=" absolute -top-1/3 -left-[150%] cursor-pointer"
+              />
+              <Image
+                alt="山东青年政治学院"
+                width={236}
+                height={96}
+                src="/home/logo_sdqnzzxy.png"
+                className=" absolute -top-1/3 -right-[150%] cursor-pointer"
+              />
+              <Image
+                width={236}
+                height={96}
+                alt="山东演艺集团"
+                src="/home/logo_sdyyjt.png"
+                className=" absolute top-1/4 -left-[200%] cursor-pointer"
+              />
+              <Image
+                width={236}
+                height={96}
+                alt="山东旅游职业学院"
+                src="/home/logo_sdlyxy.png"
+                className=" absolute top-1/4 -right-[200%] cursor-pointer"
+              />
+              <Image
+                width={236}
+                height={96}
+                alt="山东产业技术研究院"
+                src="/home/logo_sdcyyjy.png"
+                className=" absolute -bottom-[15%] -left-[175%] cursor-pointer"
+              />
+              <Image
+                width={236}
+                height={96}
+                alt="伟基炭科技"
+                src="/home/logo_wjt.png"
+                className=" absolute -bottom-[15%] -right-[175%] cursor-pointer"
+              />
+              <Image
+                width={236}
+                height={96}
+                alt="浪潮"
+                src="/home/logo_lc.png"
+                className=" absolute -bottom-[65%] -left-[135%] cursor-pointer"
+              />
+              <Image
+                width={236}
+                height={96}
+                alt="济南大学"
+                src="/home/logo_jndx.png"
+                className=" absolute -bottom-[65%] -right-[135%] cursor-pointer"
               />
             </div>
           </div>
