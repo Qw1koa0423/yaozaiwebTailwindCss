@@ -729,7 +729,7 @@ const Home: NextPage = () => {
         </section>
         {/* 第四屏 */}
         <section>
-          <div className=" bg-white w-full mb-10 2xl:mb-24">
+          <div className=" bg-white w-full  mb-5 2xl:mb-24">
             <div className=" text-center mt-10 text-lg font-medium 2xl:mt-20 2xl:text-3xl">
               硬件产品
             </div>
@@ -860,6 +860,29 @@ const Home: NextPage = () => {
                   className=" hover:cursor-pointer w-[201px] h-[40px]"
                 />
               </div>
+            </div>
+          </div>
+        </section>
+        {/* 第五屏 */}
+        <section>
+          <div
+            className=" 2xl:hidden bg-left bg-cover bg-no-repeat px-5 pt-5 pb-10 text-white"
+            style={{
+              backgroundImage: `url(/home/bg_m_4.png)`,
+            }}>
+            <div className=" text-xl font-bold">XR超高清低延迟云平台</div>
+            <div className="text-xs mt-2 font-normal">
+              面向企业/机构/创业者/开发者的产品服务平台
+            </div>
+          </div>
+          <div
+            className="hidden 2xl:block bg-left bg-cover bg-no-repeat px-96 pt-24 pb-24 text-white"
+            style={{
+              backgroundImage: `url(/home/bg_4.png)`,
+            }}>
+            <div className=" text-3xl font-bold">XR超高清低延迟云平台</div>
+            <div className="text-xl mt-4 font-normal">
+              面向企业/机构/创业者/开发者的产品服务平台
             </div>
           </div>
         </section>
