@@ -300,7 +300,7 @@ const Header: NextPage = () => {
     }
   }
   return (
-    <div className="fixed w-full bg-white px-6 py-2 mx-auto z-20 2xl:pl-64 2xl:pr-0 2xl:py-3">
+    <div className="fixed w-full bg-white px-[6%] py-2 mx-auto z-20 2xl:px-[14%] 2xl:pr-0 2xl:py-3">
       {/* 导航栏 */}
       <nav className=" flex items-center justify-between relative">
         <div className=" flex items-center space-x-11">
@@ -511,14 +511,14 @@ const Header: NextPage = () => {
               </div>
             </div>
             {/* 解决方案 */}
-            <div className="link relative transition-colors hover:text-blue-400 group">
+            <div className="link relative transition-colors cursor-pointer hover:text-blue-400 group">
               解决方案
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
               {/* 解决方案下拉 */}
-              <div className="hidden absolute -left-[600px]  w-[1400px] pt-5  cursor-default group-hover:flex ">
+              <div className="hidden absolute -left-[600px] z-50  w-[1400px] pt-5  cursor-default group-hover:flex ">
                 <div className=" bg-white text-[#333] border flex-col items-start space-y-8 p-11 flex  ">
                   <div className=" flex items-center justify-start space-x-2">
                     <Image
@@ -874,7 +874,7 @@ const Header: NextPage = () => {
               </div>
             </div>
             {/* 内容研发服务 */}
-            <div className="link relative transition-colors hover:text-blue-400 group">
+            <div className="link relative transition-colors cursor-pointer hover:text-blue-400 group">
               内容研发服务
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
@@ -973,14 +973,14 @@ const Header: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="link relative transition-colors hover:text-blue-400 group">
+            <div className="link relative transition-colors cursor-pointer hover:text-blue-400 group">
               服务支持
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
             </div>
-            <div className="link relative transition-colors hover:text-blue-400 group">
+            <div className="link relative transition-colors cursor-pointer hover:text-blue-400 group">
               关于我们
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">

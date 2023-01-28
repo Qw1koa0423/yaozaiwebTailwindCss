@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "server": "next dev -H 192.168.2.103"
   },
   "dependencies": {
     "next": "latest",

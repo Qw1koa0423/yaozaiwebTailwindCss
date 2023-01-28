@@ -7,7 +7,7 @@
       'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
       'Helvetica Neue', sans-serif;
   }
-  nav .link::after {
+  .link::after {
     --scale: 0;
     content: '';
     position: absolute;
@@ -20,7 +20,7 @@
     transform-origin: 50%;
     transition: transform 0.3s cubic-bezier(0.535, 0.05, 0.355, 1);
   }
-  nav .link:hover::after {
+  .link:hover::after {
     --scale: 1;
   }
   .hamburger {
@@ -72,7 +72,7 @@
   .menu-open {
     @apply translate-x-0;
   }
-  .switchBtnActive{
-    @apply text-xl bg-white bg-opacity-50 font-bold
+  .switchBtnActive {
+    @apply text-xl bg-white bg-opacity-50 font-bold;
   }
 }

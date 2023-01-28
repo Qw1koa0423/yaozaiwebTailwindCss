@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import { useEffect, useRef, useState } from 'react'
 import Header from '../components/Header'
 import Head from 'next/head'
+import Link from 'next/link'
 import Footer from '../components/Footer'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay } from 'swiper'
@@ -25,6 +26,8 @@ const Home: NextPage = () => {
     }
   }, [activeIndex])
   const [planActive, setPlanActive] = useState(0)
+  const btnRef = useRef<HTMLDivElement>(null)
+  const [up, setUp] = useState(true)
   return (
     <div>
       <style jsx global>{`
@@ -226,7 +229,7 @@ const Home: NextPage = () => {
             </Swiper>
           </div>
           <div
-            className=" z-50  absolute  bottom-0  left-1/2 -translate-x-1/2  flex "
+            className="z-10  absolute  bottom-0  left-1/2 -translate-x-1/2  flex "
             ref={switchBtnRef}>
             <button
               onClick={() => {
@@ -270,102 +273,457 @@ const Home: NextPage = () => {
         </section>
         {/* 第三屏 */}
         <section>
-        <div
-            className="bg-cover px-8 py-9 bg-center bg-no-repeat h-auto 2xl:h-screen"
+          <div
+            className="bg-cover px-8 py-9  bg-center bg-no-repeat h-auto 2xl:h-screen 2xl:relative"
             style={{
               backgroundImage: `url('/home/bg_3.png')`,
             }}>
-            <div className=" text-center text-white  text-xl">解决方案</div>
-            <div className=" overflow-hidden  w-full  overflow-x-scroll mt-5">
-              <div className="flex w-[600px] ">
-                <button
-                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
-                    planActive == 0 && 'bg-[#2f99fa]'
-                  }`}
-                  onClick={() => {
-                    setPlanActive(0)
-                  }}>
-                  <Image src={'/home/jypx.png'} alt="" height={30} width={30} />
-                  <div className="text-white text-sm">教育培训</div>
-                </button>
-                <button
-                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
-                    planActive == 1 && 'bg-[#2f99fa]'
-                  }`}
-                  onClick={() => {
-                    setPlanActive(1)
-                  }}>
-                  <Image src={'/home/whly.png'} alt="" height={30} width={30} />
-                  <div className="text-white text-sm">文化旅游</div>
-                </button>
-                <button
-                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
-                    planActive == 2 && 'bg-[#2f99fa]'
-                  }`}
-                  onClick={() => {
-                    setPlanActive(2)
-                  }}>
-                  <Image src={'/home/gysc.png'} alt="" height={30} width={30} />
-                  <div className="text-white text-sm">工业生产</div>
-                </button>
-                <button
-                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
-                    planActive == 3 && 'bg-[#2f99fa]'
-                  }`}
-                  onClick={() => {
-                    setPlanActive(3)
-                  }}>
-                  <Image src={'/home/tyjk.png'} alt="" height={30} width={30} />
-                  <div className="text-white text-sm">体育健康</div>
-                </button>
-                <button
-                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
-                    planActive == 4 && 'bg-[#2f99fa]'
-                  }`}
-                  onClick={() => {
-                    setPlanActive(4)
-                  }}>
-                  <Image src={'/home/smcy.png'} alt="" height={30} width={30} />
-                  <div className="text-white text-sm">商贸创意</div>
-                </button>
-                <button
-                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
-                    planActive == 5 && 'bg-[#2f99fa]'
-                  }`}
-                  onClick={() => {
-                    setPlanActive(5)
-                  }}>
-                  <Image src={'/home/yyyl.png'} alt="" height={30} width={30} />
-                  <div className="text-white text-sm">演艺娱乐</div>
-                </button>
-                <button
-                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
-                    planActive == 6 && 'bg-[#2f99fa]'
-                  }`}
-                  onClick={() => {
-                    setPlanActive(6)
-                  }}>
-                  <Image src={'/home/czfz.png'} alt="" height={30} width={30} />
-                  <div className="text-white text-sm">残障辅助</div>
-                </button>
-                <button
-                  className={`w-20 py-2 flex flex-col items-center justify-center space-y-2 outline-none ${
-                    planActive == 7 && 'bg-[#2f99fa]'
-                  }`}
-                  onClick={() => {
-                    setPlanActive(7)
-                  }}>
-                  <Image src={'/home/rhmt.png'} alt="" height={30} width={30} />
-                  <div className="text-white text-sm">融合媒体</div>
-                </button>
+            <div className="2xl:absolute 2xl:left-1/2 2xl:top-1/2 2xl:-translate-x-1/2 2xl:-translate-y-1/2">
+              <div className=" text-center text-white text-xl 2xl:text-3xl 2xl:text-start ">
+                解决方案
               </div>
-            </div>
-            <div className="grid grid-cols-4">
-              <div className=""
-              style={{
-                backgroundImage: `url('/home/jypx_1.png')`,
-              }}
-              ></div>
+              <div className=" flex flex-col space-y-5  mt-5 2xl:mt-14 2xl:flex-row 2xl:space-x-5 2xl:space-y-0 2xl:relative">
+                {up && (
+                  <div
+                    className="hidden 2xl:block absolute -top-12 rotate-180 left-24 h-9 w-9 bg-center bg-no-repeat bg-cover hover:cursor-pointer"
+                    style={{
+                      backgroundImage: `url('/home/action.png')`,
+                    }}
+                    onClick={() => {
+                      if (btnRef.current) {
+                        setUp(false)
+                        btnRef.current.style.transform = 'translateY(-300px)'
+                      }
+                    }}></div>
+                )}
+                {!up && (
+                  <div
+                    className="hidden 2xl:block absolute -bottom-12 left-20 h-9 w-9 bg-center bg-no-repeat bg-cover hover:cursor-pointer"
+                    style={{
+                      backgroundImage: `url('/home/action.png')`,
+                    }}
+                    onClick={() => {
+                      if (btnRef.current) {
+                        setUp(true)
+                        btnRef.current.style.transform = 'translateY(0)'
+                      }
+                    }}></div>
+                )}
+                {/* 第三屏切换按钮 */}
+                <div className=" overflow-hidden w-full 2xl:w-[183px]  overflow-x-scroll 2xl:overflow-x-hidden 2xl:max-h-[570px] 2xl:rounded-xl 2xl:bg-black 2xl:bg-opacity-50">
+                  <div
+                    className="flex w-[600px] 2xl:flex-col 2xl:w-[183px] 2xl:space-y-6 2xl:items-center 2xl:justify-center 2xl:transition-all 2xl:transform 2xl:duration-500 2xl:ease-in-out"
+                    ref={btnRef}>
+                    <button
+                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                        planActive == 0 && 'bg-[#2f99fa]'
+                      }`}
+                      onMouseEnter={() => {
+                        setPlanActive(0)
+                      }}>
+                      <Image
+                        src={'/home/jypx.png'}
+                        alt="教育培训"
+                        height={0}
+                        width={0}
+                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                      />
+                      <div className="text-white text-sm 2xl:text-base">
+                        教育培训
+                      </div>
+                      {planActive != 0 && (
+                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                      )}
+                    </button>
+                    <button
+                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                        planActive == 1 && 'bg-[#2f99fa]'
+                      }`}
+                      onMouseEnter={() => {
+                        setPlanActive(1)
+                      }}>
+                      <Image
+                        src={'/home/whly.png'}
+                        alt="文化旅游"
+                        height={0}
+                        width={0}
+                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                      />
+                      <div className="text-white text-sm 2xl:text-base">
+                        文化旅游
+                      </div>
+                      {planActive != 1 && (
+                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                      )}
+                    </button>
+                    <button
+                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                        planActive == 2 && 'bg-[#2f99fa]'
+                      }`}
+                      onMouseEnter={() => {
+                        setPlanActive(2)
+                      }}>
+                      <Image
+                        src={'/home/gysc.png'}
+                        alt="工业生产"
+                        height={0}
+                        width={0}
+                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                      />
+                      <div className="text-white text-sm 2xl:text-base">
+                        工业生产
+                      </div>
+                      {planActive != 2 && (
+                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                      )}
+                    </button>
+                    <button
+                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                        planActive == 3 && 'bg-[#2f99fa]'
+                      }`}
+                      onMouseEnter={() => {
+                        setPlanActive(3)
+                      }}>
+                      <Image
+                        src={'/home/tyjk.png'}
+                        alt="体育健康"
+                        height={0}
+                        width={0}
+                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                      />
+                      <div className="text-white text-sm 2xl:text-base">
+                        体育健康
+                      </div>
+                      {planActive != 3 && (
+                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                      )}
+                    </button>
+                    <button
+                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                        planActive == 4 && 'bg-[#2f99fa]'
+                      }`}
+                      onMouseEnter={() => {
+                        setPlanActive(4)
+                      }}>
+                      <Image
+                        src={'/home/smcy.png'}
+                        alt="商贸创意"
+                        height={0}
+                        width={0}
+                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                      />
+                      <div className="text-white text-sm 2xl:text-base">
+                        商贸创意
+                      </div>
+                      {planActive != 4 && (
+                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                      )}
+                    </button>
+                    <button
+                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                        planActive == 5 && 'bg-[#2f99fa]'
+                      }`}
+                      onMouseEnter={() => {
+                        setPlanActive(5)
+                      }}>
+                      <Image
+                        src={'/home/aqyj.png'}
+                        alt="安全应急"
+                        height={0}
+                        width={0}
+                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                      />
+                      <div className="text-white text-sm 2xl:text-base">
+                        安全应急
+                      </div>
+                      {planActive != 5 && (
+                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                      )}
+                    </button>
+                    <button
+                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                        planActive == 6 && 'bg-[#2f99fa]'
+                      }`}
+                      onMouseEnter={() => {
+                        setPlanActive(6)
+                      }}>
+                      <Image
+                        src={'/home/yyyl.png'}
+                        alt="演艺娱乐"
+                        height={0}
+                        width={0}
+                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                      />
+                      <div className="text-white text-sm 2xl:text-base">
+                        演艺娱乐
+                      </div>
+                      {planActive != 6 && (
+                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                      )}
+                    </button>
+                    <button
+                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                        planActive == 7 && 'bg-[#2f99fa]'
+                      }`}
+                      onMouseEnter={() => {
+                        setPlanActive(7)
+                      }}>
+                      <Image
+                        src={'/home/czfz.png'}
+                        alt="残障辅助"
+                        height={0}
+                        width={0}
+                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                      />
+                      <div className="text-white text-sm 2xl:text-base">
+                        残障辅助
+                      </div>
+                      {planActive != 7 && (
+                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                      )}
+                    </button>
+                    <button
+                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                        planActive == 8 && 'bg-[#2f99fa]'
+                      }`}
+                      onMouseEnter={() => {
+                        setPlanActive(8)
+                      }}>
+                      <Image
+                        src={'/home/rhmt.png'}
+                        alt="融合媒体"
+                        height={0}
+                        width={0}
+                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                      />
+                      <div className="text-white text-sm 2xl:text-base">
+                        融合媒体
+                      </div>
+                      {planActive != 8 && (
+                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                      )}
+                    </button>
+                  </div>
+                </div>
+                {/* 第三屏图片 */}
+                <div className="grid grid-cols-4  gap-y-4 2xl:gap-0 2xl:w-[1004px] 2xl:h-[570px] 2xl:grid-rows-2">
+                  {planActive == 0 && (
+                    <>
+                      <div className="col-span-4 relative h-52 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
+                        <Image
+                          src={'/home/jypx_1.png'}
+                          fill
+                          alt="AR教育培训"
+                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                          AR教育培训
+                        </div>
+                      </div>
+                      <div className=" col-span-4 relative h-52 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
+                        <Image
+                          src={'/home/jypx_2.png'}
+                          fill
+                          alt="AR教育培训"
+                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                          AR教育培训
+                        </div>
+                      </div>
+                      <div className="col-span-4 relative h-52 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
+                        <Image
+                          src={'/home/jypx_3.png'}
+                          fill
+                          alt="VR虚拟现实教育仿真开发"
+                          className="rounded-2xl  2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                          VR虚拟现实教育仿真开发
+                        </div>
+                      </div>
+                      <div className=" col-span-4 relative h-52 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
+                        <Image
+                          src={'/home/jypx_4.png'}
+                          fill
+                          alt="遥在远程教学平台"
+                          className=" rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <div className=" absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                          遥在远程教学平台
+                        </div>
+                      </div>
+                    </>
+                  )}
+                  {planActive == 1 && (
+                    <>
+                      <div className="col-span-4 relative h-52 2xl:col-span-2  2xl:h-full 2xl:overflow-hidden 2xl:row-span-2">
+                        <Image
+                          src={'/home/whly_1.png'}
+                          alt="文旅元宇宙"
+                          fill
+                          className=" rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <div className="  absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                          文旅元宇宙
+                        </div>
+                      </div>
+                      <div className=" col-span-4 relative h-52 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-2">
+                        <Image
+                          src={'/home/whly_2.png'}
+                          fill
+                          alt="山东文旅数字场景化平台"
+                          className=" rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <div className=" absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                          山东文旅数字场景化平台
+                        </div>
+                      </div>
+                    </>
+                  )}
+                  {planActive == 2 && (
+                    <div className=" col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:overflow-hidden 2xl:row-span-2">
+                      <Image
+                        src={'/home/gysc_1.png'}
+                        alt="数字孪生工厂"
+                        fill
+                        className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                      />
+                      <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        数字孪生工厂
+                      </div>
+                    </div>
+                  )}
+                  {planActive == 3 && (
+                    <>
+                      <div className=" col-span-4 relative h-52 2xl:col-span-2 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
+                        <Image
+                          src={'/home/tyjk_1.png'}
+                          alt="自由视角体育拍摄"
+                          fill
+                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                          自由视角体育拍摄
+                        </div>
+                      </div>
+                      <div className="col-span-4 relative h-52 2xl:col-span-2 2xl:row-span-1 2xl:h-full 2xl:overflow-hidden">
+                        <Image
+                          src={'/home/tyjk_2.png'}
+                          fill
+                          alt="沉浸式心理健康诊疗平台"
+                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                          沉浸式心理健康诊疗平台
+                        </div>
+                      </div>
+                      <div className=" col-span-4 relative h-52 2xl:col-span-2 2xl:row-span-1 2xl:h-full 2xl:overflow-hidden">
+                        <Image
+                          src={'/home/tyjk_3.png'}
+                          fill
+                          alt="全景赛事直播"
+                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                          全景赛事直播
+                        </div>
+                      </div>
+                    </>
+                  )}
+                  {planActive == 4 && (
+                    <>
+                      <div className="col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
+                        <Image
+                          src={'/home/smcy_1.png'}
+                          alt="遥在远程逛展平台"
+                          fill
+                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                          遥在远程逛展平台
+                        </div>
+                      </div>
+                      <div className=" col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
+                        <Image
+                          src={'/home/smcy_2.png'}
+                          fill
+                          alt="遥在沉浸式跨境直播带货解决方案"
+                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                          遥在沉浸式跨境直播带货解决方案
+                        </div>
+                      </div>
+                    </>
+                  )}
+                  {planActive == 5 && (
+                    <div className=" col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
+                      <Image
+                        src={'/home/aqyj_1.png'}
+                        alt="特种行业远程应急及实训平台"
+                        fill
+                        className="rounded-2xl  2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                      />
+                      <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        特种行业远程应急及实训平台
+                      </div>
+                    </div>
+                  )}
+                  {planActive == 6 && (
+                    <>
+                      <div className=" col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
+                        <Image
+                          src={'/home/yyyl_1.png'}
+                          alt="自由视角演艺拍摄"
+                          fill
+                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                          自由视角演艺拍摄
+                        </div>
+                      </div>
+                      <div className=" col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
+                        <Image
+                          src={'/home/yyyl_2.png'}
+                          alt="全景演艺直播"
+                          fill
+                          className="rounded-2xl  2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                          全景演艺直播
+                        </div>
+                      </div>
+                    </>
+                  )}
+                  {planActive == 7 && (
+                    <div className=" col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
+                      <Image
+                        src={'/home/czrs_1.png'}
+                        alt="残障人士远程体验平台"
+                        fill
+                        className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                      />
+                      <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        残障人士远程体验平台
+                      </div>
+                    </div>
+                  )}
+                  {planActive == 8 && (
+                    <div className="col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
+                      <Image
+                        src={'/home/rhmt_1.png'}
+                        alt="遥在超高清低延迟视频解决方案"
+                        fill
+                        className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                      />
+                      <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        遥在超高清低延迟视频解决方案
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -376,20 +734,20 @@ const Home: NextPage = () => {
               虚拟现实+产业
             </div>
             <div className="relative flex justify-center items-center bg-[url('../public/home/bg_5.png')]">
-                {/* <Image
+              {/* <Image
                   src={'/home/bg_5.png'}
                   alt=""
                   height={0}
                   width={0}
                   className=" w-screen"
                 /> */}
-                <Image
-                  src={'/home/map.png'}
-                  alt=""
-                  height={0}
-                  width={0}
-                  className=" w-24"
-                />
+              <Image
+                src={'/home/map.png'}
+                alt=""
+                height={0}
+                width={0}
+                className=" w-24"
+              />
             </div>
           </div>
         </section>
