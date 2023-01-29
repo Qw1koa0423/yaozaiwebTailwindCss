@@ -26,6 +26,7 @@ const Home: NextPage = () => {
     }
   }, [activeIndex])
   const [planActive, setPlanActive] = useState(0)
+  const [tabActive, setTabActive] = useState<number | boolean>(false)
   const btnRef = useRef<HTMLDivElement>(null)
   const [up, setUp] = useState(true)
   return (
@@ -283,7 +284,7 @@ const Home: NextPage = () => {
                 解决方案
               </div>
               <div className=" flex flex-col space-y-5  mt-5 2xl:mt-14 2xl:flex-row 2xl:space-x-5 2xl:space-y-0 2xl:relative">
-                {up && (
+                {!up && (
                   <div
                     className="hidden 2xl:block absolute -top-12 rotate-180 left-24 h-9 w-9 bg-center bg-no-repeat bg-cover hover:cursor-pointer"
                     style={{
@@ -291,12 +292,12 @@ const Home: NextPage = () => {
                     }}
                     onClick={() => {
                       if (btnRef.current) {
-                        setUp(false)
-                        btnRef.current.style.transform = 'translateY(-300px)'
+                        setUp(true)
+                        btnRef.current.style.transform = 'translateY(0)'
                       }
                     }}></div>
                 )}
-                {!up && (
+                {up && (
                   <div
                     className="hidden 2xl:block absolute -bottom-12 left-20 h-9 w-9 bg-center bg-no-repeat bg-cover hover:cursor-pointer"
                     style={{
@@ -304,8 +305,8 @@ const Home: NextPage = () => {
                     }}
                     onClick={() => {
                       if (btnRef.current) {
-                        setUp(true)
-                        btnRef.current.style.transform = 'translateY(0)'
+                        setUp(false)
+                        btnRef.current.style.transform = 'translateY(-300px)'
                       }
                     }}></div>
                 )}
@@ -733,7 +734,7 @@ const Home: NextPage = () => {
             <div className=" text-center mt-10 text-lg font-medium 2xl:mt-20 2xl:text-3xl">
               硬件产品
             </div>
-            <div className="flex flex-col items-center justify-center mt-4 space-y-4 2xl:flex-row 2xl:space-y-0 2xl:mt-24 h-56">
+            <div className="flex flex-col items-center justify-center mt-4 space-y-4 2xl:flex-row 2xl:space-y-0 2xl:mt-24 2xl:h-56">
               <div
                 className=" bg-center bg-cover bg-no-repeat w-80 h-40 rounded-2xl relative 2xl:w-72 2xl:h-52 2xl:hover:h-56 2xl:hover:-translate-y-4 2xl:transition-all 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
                 style={{
@@ -888,7 +889,7 @@ const Home: NextPage = () => {
         </section>
         {/* 第六屏 */}
         <section>
-          <div className=" bg-[#FBFCFF] 2xl:hidden">
+          <div className=" bg-[#FBFCFF] 2xl:hidden pb-4">
             <div className="text-xl text-center font-medium pt-9">
               虚拟现实+产业
             </div>
@@ -1188,6 +1189,444 @@ const Home: NextPage = () => {
                 src="/home/logo_jndx.png"
                 className=" absolute -bottom-[65%] -right-[135%] cursor-pointer"
               />
+            </div>
+          </div>
+        </section>
+        {/* 第七屏 */}
+        <section>
+          <div className="py-9 px-4 text-center mx-auto 2xl:px-80 2xl:py-20">
+            <div className="text-center font-medium text-xl mb-4 2xl:pb-8 2xl:mb-8 2xl:text-3xl 2xl:border-b-2  2xl:text-left">
+              遥在科技
+            </div>
+            <div className="2xl:hidden">
+              <div className="py-1 px-4">
+                <button
+                  className=" border-b outline-none group w-full flex items-center justify-between text-[#333]"
+                  onClick={() => {
+                    setTabActive(1)
+                  }}>
+                  <div className="transtition duration-500 ease text-lg font-normal">
+                    软件技术&服务
+                  </div>
+                  <Image
+                    src={'/home/add.svg'}
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="group-focus:rotate-45 transition duration-500 ease"
+                  />
+                </button>
+                {tabActive == 1 && (
+                  <div className=" flex flex-col items-start justify-center">
+                    <Link href="/" className=" font-thin py-2">
+                      XR超高清低延迟云平台
+                    </Link>
+                    <Link href="/" className=" font-thin py-2">
+                      XR-NeRF实景建模引擎
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <div className="py-1 px-4">
+                <button
+                  className=" border-b outline-none group w-full flex items-center justify-between text-[#333]"
+                  onClick={() => {
+                    setTabActive(2)
+                  }}>
+                  <div className="transtition duration-500 ease text-lg font-normal">
+                    硬件产品
+                  </div>
+                  <Image
+                    src={'/home/add.svg'}
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="group-focus:rotate-45 transition duration-500 ease"
+                  />
+                </button>
+                {tabActive == 2 && (
+                  <div className=" flex flex-col items-start justify-center">
+                    <Link href="/" className="font-thin py-2">
+                      TP Robot
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      TP C100
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      TP C300
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      TP 视觉互动采集模组
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <div className="py-1 px-4">
+                <button
+                  className=" border-b outline-none group w-full flex items-center justify-between text-[#333]"
+                  onClick={() => {
+                    setTabActive(3)
+                  }}>
+                  <div className="transtition duration-500 ease text-lg font-normal">
+                    解决方案
+                  </div>
+                  <Image
+                    src={'/home/add.svg'}
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="group-focus:rotate-45 transition duration-500 ease"
+                  />
+                </button>
+                {tabActive == 3 && (
+                  <div className=" flex flex-col items-start justify-center">
+                    <Link href="/" className="font-thin py-2">
+                      教育培训
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      文化旅游
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      工业生产
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      体育健康
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      融合媒体
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      智慧城市
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      商贸创意
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      安全应急
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      残障辅助
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      演艺娱乐
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <div className="py-1 px-4">
+                <button
+                  className=" border-b outline-none group w-full flex items-center justify-between text-[#333]"
+                  onClick={() => {
+                    setTabActive(4)
+                  }}>
+                  <div className="transtition duration-500 ease text-lg font-normal">
+                    内容研发服务
+                  </div>
+                  <Image
+                    src={'/home/add.svg'}
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="group-focus:rotate-45 transition duration-500 ease"
+                  />
+                </button>
+                {tabActive == 4 && (
+                  <div className=" flex flex-col items-start justify-center">
+                    <Link href="/" className="font-thin py-2">
+                      全景直播
+                    </Link>
+                    <Link href="" className="font-thin py-2">
+                      全景内容
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      3D 180度直播
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      3D 180度内容
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      多角度视频
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      虚拟仿真
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      数字孪生
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      三维建模
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      NERF视频
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <div className="py-1 px-4">
+                <button
+                  className=" border-b outline-none group w-full flex items-center justify-between text-[#333]"
+                  onClick={() => {
+                    setTabActive(5)
+                  }}>
+                  <div className="transtition duration-500 ease text-lg font-normal">
+                    服务支持
+                  </div>
+                  <Image
+                    src={'/home/add.svg'}
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="group-focus:rotate-45 transition duration-500 ease"
+                  />
+                </button>
+                {tabActive == 5 && (
+                  <div className=" flex flex-col items-start justify-center">
+                    <Link href="/" className="font-thin py-2">
+                      售前服务
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      软件下载
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      使用说明
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <div className="py-1 px-4">
+                <button
+                  className=" border-b outline-none group w-full flex items-center justify-between text-[#333]"
+                  onClick={() => {
+                    setTabActive(6)
+                  }}>
+                  <div className="transtition duration-500 ease text-lg font-normal">
+                    关于我们
+                  </div>
+                  <Image
+                    src={'/home/add.svg'}
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="group-focus:rotate-45 transition duration-500 ease"
+                  />
+                </button>
+                {tabActive == 6 && (
+                  <div className=" flex flex-col items-start justify-center">
+                    <Link href="/" className="font-thin py-2">
+                      行业资讯
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      公司咨询
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      关于我们
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      联系我们
+                    </Link>
+                    <Link href="/" className="font-thin py-2">
+                      加入我们
+                    </Link>
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="hidden 2xl:flex  2xl:justify-around">
+              <div className="flex flex-col   items-start space-y-3">
+                <div className="2xl:text-base font-semibold  mb-3">
+                  软件技术&服务
+                </div>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  XR超高清低延迟云平台
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  XR-NeRF实景建模引擎
+                </Link>
+              </div>
+              <div className="flex flex-col   items-start space-y-3">
+                <div className="2xl:text-base font-semibold  mb-3">
+                  硬件产品
+                </div>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  TP Robot
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  TP C100
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  TP C300
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  TP 视觉互动采集模组
+                </Link>
+              </div>
+              <div className="flex flex-col   items-start space-y-3">
+                <div className="2xl:text-base font-semibold  mb-3">
+                  解决方案
+                </div>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  教育培训
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  文化旅游
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  工业生产
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  体育健康
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  融合媒体
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  智慧城市
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  商贸创意
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  安全应急
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  残障辅助
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  演艺娱乐
+                </Link>
+              </div>
+              <div className="flex flex-col   items-start space-y-3">
+                <div className="2xl:text-base font-semibold  mb-3">
+                  内容研发服务
+                </div>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  全景直播
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  全景内容
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  3D 180度直播
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  3D 180度内容
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  多角度视频
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  虚拟仿真
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  数字孪生
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  三维建模
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  NERF视频
+                </Link>
+              </div>
+              <div className="flex flex-col   items-start space-y-3">
+                <div className="2xl:text-base font-semibold  mb-3">
+                  服务支持
+                </div>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  售前售后
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  软件下载
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  使用说明
+                </Link>
+              </div>
+              <div className="flex flex-col   items-start space-y-3">
+                <div className="2xl:text-base font-semibold  mb-3">
+                  关于我们
+                </div>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  行业资讯
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  公司咨询
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  关于我们
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  联系我们
+                </Link>
+                <Link
+                  className="link relative transition-colors hover:text-blue-400"
+                  href="/">
+                  加入我们
+                </Link>
+              </div>
             </div>
           </div>
         </section>
