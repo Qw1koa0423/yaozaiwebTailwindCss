@@ -327,7 +327,9 @@ const Home: NextPage = () => {
                         alt="教育培训"
                         height={0}
                         width={0}
-                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                        className={`w-8 h-8 2xl:w-11 2xl:h-11  ${
+                          planActive == 0 && '2xl:tabActive'
+                        }  `}
                       />
                       <div className="text-white text-sm 2xl:text-base">
                         教育培训
@@ -348,7 +350,9 @@ const Home: NextPage = () => {
                         alt="文化旅游"
                         height={0}
                         width={0}
-                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                        className={` w-8 h-8 2xl:w-11 2xl:h-11 ${
+                          planActive == 1 && '2xl:tabActive'
+                        } `}
                       />
                       <div className="text-white text-sm 2xl:text-base">
                         文化旅游
@@ -369,7 +373,9 @@ const Home: NextPage = () => {
                         alt="工业生产"
                         height={0}
                         width={0}
-                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                        className={`w-8 h-8 2xl:w-11 2xl:h-11 ${
+                          planActive == 2 && '2xl:tabActive'
+                        }`}
                       />
                       <div className="text-white text-sm 2xl:text-base">
                         工业生产
@@ -390,7 +396,9 @@ const Home: NextPage = () => {
                         alt="体育健康"
                         height={0}
                         width={0}
-                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                        className={` w-8 h-8 2xl:w-11 2xl:h-11 ${
+                          planActive == 3 && '2xl:tabActive'
+                        }`}
                       />
                       <div className="text-white text-sm 2xl:text-base">
                         体育健康
@@ -411,7 +419,9 @@ const Home: NextPage = () => {
                         alt="商贸创意"
                         height={0}
                         width={0}
-                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                        className={` w-8 h-8 2xl:w-11 2xl:h-11 ${
+                          planActive == 4 && '2xl:tabActive'
+                        }`}
                       />
                       <div className="text-white text-sm 2xl:text-base">
                         商贸创意
@@ -432,7 +442,9 @@ const Home: NextPage = () => {
                         alt="安全应急"
                         height={0}
                         width={0}
-                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                        className={` w-8 h-8 2xl:w-11 2xl:h-11 ${
+                          planActive == 5 && '2xl:tabActive'
+                        }`}
                       />
                       <div className="text-white text-sm 2xl:text-base">
                         安全应急
@@ -453,7 +465,9 @@ const Home: NextPage = () => {
                         alt="演艺娱乐"
                         height={0}
                         width={0}
-                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                        className={` w-8 h-8 2xl:w-11 2xl:h-11 ${
+                          planActive == 6 && '2xl:tabActive'
+                        }`}
                       />
                       <div className="text-white text-sm 2xl:text-base">
                         演艺娱乐
@@ -474,7 +488,9 @@ const Home: NextPage = () => {
                         alt="残障辅助"
                         height={0}
                         width={0}
-                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                        className={` w-8 h-8 2xl:w-11 2xl:h-11 ${
+                          planActive == 7 && '2xl:tabActive'
+                        }`}
                       />
                       <div className="text-white text-sm 2xl:text-base">
                         残障辅助
@@ -495,7 +511,9 @@ const Home: NextPage = () => {
                         alt="融合媒体"
                         height={0}
                         width={0}
-                        className=" w-8 h-8 2xl:w-11 2xl:h-11"
+                        className={` w-8 h-8 2xl:w-11 2xl:h-11 ${
+                          planActive == 8 && '2xl:tabActive'
+                        }`}
                       />
                       <div className="text-white text-sm 2xl:text-base">
                         融合媒体
@@ -505,7 +523,7 @@ const Home: NextPage = () => {
                       )}
                     </button>
                   </div>
-                </div>
+                </div> 
                 {/* 第三屏图片 */}
                 <div className="grid grid-cols-4  gap-y-4 2xl:gap-0 2xl:w-[1004px] 2xl:h-[570px] 2xl:grid-rows-2">
                   {planActive == 0 && (
