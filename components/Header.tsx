@@ -270,8 +270,8 @@ const Header: NextPage = () => {
             key={index}
             className={
               list.btn
-                ? 'flex justify-between items-center text-xs text-gray-500'
-                : 'flex justify-between text-base items-center'
+                ? 'flex justify-between items-center  text-sm text-gray-500'
+                : 'flex justify-between  text-base items-center'
             }
             onClick={() => {
               if (!item.href && list.menu) {
@@ -285,7 +285,7 @@ const Header: NextPage = () => {
                 alt=""
                 height={0}
                 width={0}
-                className=" w-2"
+                className="w-2"
               />
             )}
           </Link>

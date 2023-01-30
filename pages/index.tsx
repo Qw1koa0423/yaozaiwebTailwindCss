@@ -523,12 +523,12 @@ const Home: NextPage = () => {
                       )}
                     </button>
                   </div>
-                </div> 
+                </div>
                 {/* 第三屏图片 */}
                 <div className="grid grid-cols-4  gap-y-4 2xl:gap-0 2xl:w-[1004px] 2xl:h-[570px] 2xl:grid-rows-2">
                   {planActive == 0 && (
                     <>
-                      <div className="col-span-4 relative h-52 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
+                      <div className="col-span-4 relative h-44 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
                         <Image
                           src={'/home/jypx_1.png'}
                           fill
@@ -539,7 +539,7 @@ const Home: NextPage = () => {
                           AR教育培训
                         </div>
                       </div>
-                      <div className=" col-span-4 relative h-52 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
+                      <div className=" col-span-4 relative h-44 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
                         <Image
                           src={'/home/jypx_2.png'}
                           fill
@@ -550,7 +550,7 @@ const Home: NextPage = () => {
                           AR教育培训
                         </div>
                       </div>
-                      <div className="col-span-4 relative h-52 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
+                      <div className="col-span-4 relative h-44 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
                         <Image
                           src={'/home/jypx_3.png'}
                           fill
@@ -561,7 +561,7 @@ const Home: NextPage = () => {
                           VR虚拟现实教育仿真开发
                         </div>
                       </div>
-                      <div className=" col-span-4 relative h-52 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
+                      <div className=" col-span-4 relative h-44 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
                         <Image
                           src={'/home/jypx_4.png'}
                           fill
@@ -576,23 +576,35 @@ const Home: NextPage = () => {
                   )}
                   {planActive == 1 && (
                     <>
-                      <div className="col-span-4 relative h-52 2xl:col-span-2  2xl:h-full 2xl:overflow-hidden 2xl:row-span-2">
+                      <div className="col-span-4 relative h-44 2xl:col-span-2  2xl:h-full 2xl:overflow-hidden 2xl:row-span-2">
                         <Image
                           src={'/home/whly_1.png'}
                           alt="文旅元宇宙"
                           fill
-                          className=" rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="hidden 2xl:block rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <Image
+                          src={'/home/whly_m_1.png'}
+                          alt="文旅元宇宙"
+                          fill
+                          className=" 2xl:hidden rounded-2xl"
                         />
                         <div className="  absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
                           文旅元宇宙
                         </div>
                       </div>
-                      <div className=" col-span-4 relative h-52 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-2">
+                      <div className=" col-span-4 relative h-44 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-2">
                         <Image
                           src={'/home/whly_2.png'}
                           fill
                           alt="山东文旅数字场景化平台"
-                          className=" rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="hidden 2xl:block rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <Image
+                          src={'/home/whly_m_2.png'}
+                          fill
+                          alt="山东文旅数字场景化平台"
+                          className=" 2xl:hidden rounded-2xl"
                         />
                         <div className=" absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
                           山东文旅数字场景化平台
@@ -601,7 +613,7 @@ const Home: NextPage = () => {
                     </>
                   )}
                   {planActive == 2 && (
-                    <div className=" col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:overflow-hidden 2xl:row-span-2">
+                    <div className=" col-span-4 relative h-44 2xl:col-span-4 2xl:h-full 2xl:overflow-hidden 2xl:row-span-2">
                       <Image
                         src={'/home/gysc_1.png'}
                         alt="数字孪生工厂"
@@ -615,18 +627,24 @@ const Home: NextPage = () => {
                   )}
                   {planActive == 3 && (
                     <>
-                      <div className=" col-span-4 relative h-52 2xl:col-span-2 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
+                      <div className=" col-span-4 relative h-44 2xl:col-span-2 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
                         <Image
                           src={'/home/tyjk_1.png'}
                           alt="自由视角体育拍摄"
                           fill
-                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="hidden 2xl:block rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <Image
+                          src={'/home/tyjk_m_1.png'}
+                          alt="自由视角体育拍摄"
+                          fill
+                          className=" 2xl:hidden rounded-2xl"
                         />
                         <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
                           自由视角体育拍摄
                         </div>
                       </div>
-                      <div className="col-span-4 relative h-52 2xl:col-span-2 2xl:row-span-1 2xl:h-full 2xl:overflow-hidden">
+                      <div className="col-span-4 relative h-44 2xl:col-span-2 2xl:row-span-1 2xl:h-full 2xl:overflow-hidden">
                         <Image
                           src={'/home/tyjk_2.png'}
                           fill
@@ -637,7 +655,7 @@ const Home: NextPage = () => {
                           沉浸式心理健康诊疗平台
                         </div>
                       </div>
-                      <div className=" col-span-4 relative h-52 2xl:col-span-2 2xl:row-span-1 2xl:h-full 2xl:overflow-hidden">
+                      <div className=" col-span-4 relative h-44 2xl:col-span-2 2xl:row-span-1 2xl:h-full 2xl:overflow-hidden">
                         <Image
                           src={'/home/tyjk_3.png'}
                           fill
@@ -652,23 +670,35 @@ const Home: NextPage = () => {
                   )}
                   {planActive == 4 && (
                     <>
-                      <div className="col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
+                      <div className="col-span-4 relative h-44 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
                         <Image
                           src={'/home/smcy_1.png'}
                           alt="遥在远程逛展平台"
                           fill
-                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="hidden 2xl:block rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <Image
+                          src={'/home/smcy_m_1.png'}
+                          alt="遥在远程逛展平台"
+                          fill
+                          className="2xl:hidden rounded-2xl"
                         />
                         <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
                           遥在远程逛展平台
                         </div>
                       </div>
-                      <div className=" col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
+                      <div className=" col-span-4 relative h-44 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
                         <Image
                           src={'/home/smcy_2.png'}
                           fill
                           alt="遥在沉浸式跨境直播带货解决方案"
-                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="hidden 2xl:block rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        />
+                        <Image
+                          src={'/home/smcy_m_2.png'}
+                          alt="遥在远程逛展平台"
+                          fill
+                          className="2xl:hidden rounded-2xl"
                         />
                         <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
                           遥在沉浸式跨境直播带货解决方案
@@ -677,7 +707,7 @@ const Home: NextPage = () => {
                     </>
                   )}
                   {planActive == 5 && (
-                    <div className=" col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
+                    <div className=" col-span-4 relative h-48 2xl:col-span-4 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
                       <Image
                         src={'/home/aqyj_1.png'}
                         alt="特种行业远程应急及实训平台"
@@ -691,7 +721,7 @@ const Home: NextPage = () => {
                   )}
                   {planActive == 6 && (
                     <>
-                      <div className=" col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
+                      <div className=" col-span-4 relative h-36 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
                         <Image
                           src={'/home/yyyl_1.png'}
                           alt="自由视角演艺拍摄"
@@ -702,7 +732,7 @@ const Home: NextPage = () => {
                           自由视角演艺拍摄
                         </div>
                       </div>
-                      <div className=" col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
+                      <div className=" col-span-4 relative h-36 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
                         <Image
                           src={'/home/yyyl_2.png'}
                           alt="全景演艺直播"
@@ -716,7 +746,7 @@ const Home: NextPage = () => {
                     </>
                   )}
                   {planActive == 7 && (
-                    <div className=" col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
+                    <div className=" col-span-4 relative h-44 2xl:col-span-4 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
                       <Image
                         src={'/home/czrs_1.png'}
                         alt="残障人士远程体验平台"
@@ -729,7 +759,7 @@ const Home: NextPage = () => {
                     </div>
                   )}
                   {planActive == 8 && (
-                    <div className="col-span-4 relative h-52 2xl:col-span-4 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
+                    <div className="col-span-4 relative h-44 2xl:col-span-4 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
                       <Image
                         src={'/home/rhmt_1.png'}
                         alt="遥在超高清低延迟视频解决方案"
