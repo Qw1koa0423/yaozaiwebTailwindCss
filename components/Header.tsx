@@ -300,7 +300,7 @@ const Header: NextPage = () => {
     }
   }
   return (
-    <div className="fixed w-full bg-white px-[6%] py-2 mx-auto z-20 2xl:px-[14%] 2xl:pr-0 2xl:py-3">
+    <div className="fixed w-full bg-white px-[6%] py-2 mx-auto z-20 lg:px-[0] lg:pr-0 lg:py-3 lg:flex lg:justify-center">
       {/* 导航栏 */}
       <nav className=" flex items-center justify-between relative">
         <div className=" flex items-center space-x-11">
@@ -310,24 +310,24 @@ const Header: NextPage = () => {
             alt="遥在科技"
             height={0}
             width={0}
-            className=" h-7 w-auto cursor-pointer 2xl:h-14"
+            className=" h-7 w-auto cursor-pointer lg:h-14 sm:h-14"
           />
           {/* 导航栏菜单-pc */}
-          <div className=" hidden space-x-14 2xl:flex">
+          <div className=" hidden space-x-14 lg:flex lg:items-center">
             <Link
               href={'/'}
               className="link relative transition-colors hover:text-blue-400">
-              首页
+              <span className=" whitespace-nowrap">首页</span>
             </Link>
             {/* 软件技术与服务 */}
-            <div className="link relative transition-colors cursor-pointer  hover:text-blue-400 group">
+            <div className="whitespace-nowrap link relative transition-colors cursor-pointer  hover:text-blue-400 group ">
               软件技术&服务
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
               {/* 软件技术与服务下拉 */}
-              <div className="hidden absolute  -left-36 w-[600px] pt-5  cursor-default group-hover:flex ">
+              <div className="hidden absolute  -left-36 w-[600px] pt-5 lg:-top-16 2xl:top-auto  cursor-default group-hover:flex lg:scale-[.7] 2xl:scale-100">
                 <div className="  bg-white text-[#333] border flex-col items-start  space-y-14 p-12 flex  ">
                   <div className=" flex items-center justify-start space-x-2">
                     <Image
@@ -426,14 +426,14 @@ const Header: NextPage = () => {
               </div>
             </div>
             {/* 硬件产品 */}
-            <div className="link relative transition-colors cursor-pointer hover:text-blue-400 group">
+            <div className="whitespace-nowrap link relative transition-colors cursor-pointer hover:text-blue-400 group">
               硬件产品
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
               {/* 硬件产品下拉 */}
-              <div className="hidden absolute -left-96 w-[900px] pt-5  cursor-default group-hover:flex ">
+              <div className="hidden absolute -left-96 w-[900px] pt-5 lg:-top-8 2xl:top-auto cursor-default group-hover:flex lg:scale-[.7] 2xl:scale-100">
                 <div className="bg-white text-[#333] border flex-col items-start  space-y-14 p-12 flex">
                   <div className=" flex items-center justify-start space-x-2">
                     <Image
@@ -511,14 +511,14 @@ const Header: NextPage = () => {
               </div>
             </div>
             {/* 解决方案 */}
-            <div className="link relative transition-colors cursor-pointer hover:text-blue-400 group">
+            <div className="whitespace-nowrap link relative transition-colors cursor-pointer hover:text-blue-400 group">
               解决方案
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
               {/* 解决方案下拉 */}
-              <div className="hidden absolute -left-[600px] z-50  w-[1400px] pt-5  cursor-default group-hover:flex ">
+              <div className="hidden absolute -left-[600px] z-50  w-[1400px] pt-5 lg:-top-28 2xl:top-auto  cursor-default group-hover:flex lg:scale-[.7] 2xl:scale-100">
                 <div className=" bg-white text-[#333] border flex-col items-start space-y-8 p-11 flex  ">
                   <div className=" flex items-center justify-start space-x-2">
                     <Image
@@ -874,14 +874,14 @@ const Header: NextPage = () => {
               </div>
             </div>
             {/* 内容研发服务 */}
-            <div className="link relative transition-colors cursor-pointer hover:text-blue-400 group">
+            <div className="whitespace-nowrap link relative transition-colors cursor-pointer hover:text-blue-400 group">
               内容研发服务
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
               {/* 内容研发服务下拉 */}
-              <div className=" hidden absolute -left-[600px] w-[1300px] pt-5  cursor-default group-hover:flex ">
+              <div className=" hidden absolute -left-[600px] w-[1300px] pt-5 lg:-top-8 2xl:top-auto  cursor-default group-hover:flex lg:scale-[.7] 2xl:scale-100">
                 <div className="bg-white text-[#333] border flex-col items-start  space-y-14 p-12 flex">
                   <div className=" flex items-center justify-start space-x-2">
                     <Image
@@ -973,14 +973,14 @@ const Header: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="link relative transition-colors cursor-pointer hover:text-blue-400 group">
+            <div className=" whitespace-nowrap link relative transition-colors cursor-pointer hover:text-blue-400 group">
               服务支持
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
                 ▲
               </span>
             </div>
-            <div className="link relative transition-colors cursor-pointer hover:text-blue-400 group">
+            <div className="whitespace-nowrap link relative transition-colors cursor-pointer hover:text-blue-400 group">
               关于我们
               <span className=" group-hover:hidden ml-1 text-sm">▼</span>
               <span className=" hidden ml-1 text-sm group-hover:inline-block">
@@ -998,7 +998,7 @@ const Header: NextPage = () => {
               setMenuList(menus)
             }, 500)
           }}
-          className="block hamburger focus:outline-none  2xl:hidden"
+          className="block hamburger focus:outline-none  lg:hidden sm:scale-150"
           type="button">
           <span className="hamburger-top"></span>
           <span className="hamburger-middle"></span>

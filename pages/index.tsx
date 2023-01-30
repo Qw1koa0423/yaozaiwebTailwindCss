@@ -58,7 +58,7 @@ const Home: NextPage = () => {
       <Header />
       <main className="relative top-0">
         {/* 移动第一屏 */}
-        <section className="pt-10 2xl:hidden">
+        <section className="pt-10 lg:hidden">
           <div className="container">
             <Swiper
               pagination={true}
@@ -143,7 +143,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         {/* PC第一屏 */}
-        <section className=" hidden 2xl:flex relative ">
+        <section className=" hidden lg:flex relative 2xl:pt-0 sm:pt-10 ">
           <div className=" relative overflow-hidden max-w-full">
             <Swiper
               ref={swiperRef}
@@ -160,7 +160,7 @@ const Home: NextPage = () => {
                   alt=""
                   height={0}
                   width={0}
-                  className=" w-full h-screen"
+                  className=" w-full 2xl:h-screen"
                 />
                 <div className="absolute  top-1/3 left-[19%] w-full font-normal  flex flex-col space-y-7">
                   <p className=" text-5xl ">
@@ -179,7 +179,7 @@ const Home: NextPage = () => {
                   alt=""
                   height={0}
                   width={0}
-                  className=" w-full h-screen"
+                  className=" w-full 2xl:h-screen"
                 />
                 <div className="absolute  top-1/3 left-[19%] w-full font-normal  flex flex-col space-y-7">
                   <p className="text-5xl ">
@@ -197,7 +197,7 @@ const Home: NextPage = () => {
                   alt=""
                   height={0}
                   width={0}
-                  className=" w-full h-screen"
+                  className=" w-full 2xl:h-screen"
                 />
                 <div className="absolute  top-1/3 left-[19%] w-full font-normal  flex flex-col space-y-7">
                   <p className="text-5xl ">
@@ -215,7 +215,7 @@ const Home: NextPage = () => {
                   alt=""
                   height={0}
                   width={0}
-                  className=" w-full h-screen"
+                  className=" w-full 2xl:h-screen"
                 />
                 <div className="absolute  top-1/3 left-[19%] w-full font-normal  flex flex-col space-y-7">
                   <p className="text-5xl">
@@ -275,18 +275,18 @@ const Home: NextPage = () => {
         {/* 第三屏 */}
         <section>
           <div
-            className="bg-cover px-8 py-9  bg-center bg-no-repeat h-auto 2xl:h-screen 2xl:relative"
+            className="bg-cover px-8 py-9  bg-center bg-no-repeat h-auto lg:h-screen lg:relative"
             style={{
               backgroundImage: `url('/home/bg_3.png')`,
             }}>
-            <div className="2xl:absolute 2xl:left-1/2 2xl:top-1/2 2xl:-translate-x-1/2 2xl:-translate-y-1/2">
-              <div className=" text-center text-white text-xl 2xl:text-3xl 2xl:text-start ">
+            <div className="lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2">
+              <div className=" text-center text-white text-xl lg:text-3xl lg:text-start ">
                 解决方案
               </div>
-              <div className=" flex flex-col space-y-5  mt-5 2xl:mt-14 2xl:flex-row 2xl:space-x-5 2xl:space-y-0 2xl:relative">
+              <div className=" flex flex-col space-y-5  mt-5 lg:mt-14 lg:flex-row lg:space-x-5 lg:space-y-0 lg:relative">
                 {!up && (
                   <div
-                    className="hidden 2xl:block absolute -top-12 rotate-180 left-24 h-9 w-9 bg-center bg-no-repeat bg-cover hover:cursor-pointer"
+                    className="hidden lg:block absolute -top-12 rotate-180 left-24 h-9 w-9 bg-center bg-no-repeat bg-cover hover:cursor-pointer"
                     style={{
                       backgroundImage: `url('/home/action.png')`,
                     }}
@@ -299,7 +299,7 @@ const Home: NextPage = () => {
                 )}
                 {up && (
                   <div
-                    className="hidden 2xl:block absolute -bottom-12 left-20 h-9 w-9 bg-center bg-no-repeat bg-cover hover:cursor-pointer"
+                    className="hidden lg:block absolute -bottom-12 left-20 h-9 w-9 bg-center bg-no-repeat bg-cover hover:cursor-pointer"
                     style={{
                       backgroundImage: `url('/home/action.png')`,
                     }}
@@ -311,12 +311,12 @@ const Home: NextPage = () => {
                     }}></div>
                 )}
                 {/* 第三屏切换按钮 */}
-                <div className=" overflow-hidden w-full 2xl:w-[183px]  overflow-x-scroll 2xl:overflow-x-hidden 2xl:max-h-[570px] 2xl:rounded-xl 2xl:bg-black 2xl:bg-opacity-50">
+                <div className=" overflow-hidden w-full lg:w-[183px]  overflow-x-scroll lg:overflow-x-hidden lg:max-h-[570px] lg:rounded-xl lg:bg-black lg:bg-opacity-50">
                   <div
-                    className="flex w-[600px] 2xl:flex-col 2xl:w-[183px] 2xl:space-y-6 2xl:items-center 2xl:justify-center 2xl:transition-all 2xl:transform 2xl:duration-500 2xl:ease-in-out"
+                    className="flex w-[800px] space-x-3 lg:space-x-0 lg:flex-col lg:w-[183px] lg:space-y-6 lg:items-center lg:justify-center lg:transition-all lg:transform lg:duration-500 lg:ease-in-out"
                     ref={btnRef}>
                     <button
-                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                      className={`w-20 lg:w-[183px] lg:h-[75px]  lg:rounded-xl py-2 flex flex-col lg:flex-row lg:space-x-3 items-center justify-center space-y-2  lg:group outline-none lg:relative ${
                         planActive == 0 && 'bg-[#2f99fa]'
                       }`}
                       onMouseEnter={() => {
@@ -327,19 +327,19 @@ const Home: NextPage = () => {
                         alt="教育培训"
                         height={0}
                         width={0}
-                        className={`w-8 h-8 2xl:w-11 2xl:h-11  ${
-                          planActive == 0 && '2xl:tabActive'
+                        className={`w-8 h-8 lg:w-11 lg:h-11  ${
+                          planActive == 0 && 'lg:tabActive'
                         }  `}
                       />
-                      <div className="text-white text-sm 2xl:text-base">
+                      <div className="text-white text-sm lg:text-base">
                         教育培训
                       </div>
                       {planActive != 0 && (
-                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                        <hr className="w-6 absolute hidden bottom-0 lg:flex" />
                       )}
                     </button>
                     <button
-                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                      className={`w-20 lg:w-[183px] lg:h-[75px]  lg:rounded-xl py-2 flex flex-col lg:flex-row lg:space-x-3 items-center justify-center space-y-2  lg:group outline-none lg:relative ${
                         planActive == 1 && 'bg-[#2f99fa]'
                       }`}
                       onMouseEnter={() => {
@@ -350,19 +350,19 @@ const Home: NextPage = () => {
                         alt="文化旅游"
                         height={0}
                         width={0}
-                        className={` w-8 h-8 2xl:w-11 2xl:h-11 ${
-                          planActive == 1 && '2xl:tabActive'
+                        className={` w-8 h-8 lg:w-11 lg:h-11 ${
+                          planActive == 1 && 'lg:tabActive'
                         } `}
                       />
-                      <div className="text-white text-sm 2xl:text-base">
+                      <div className="text-white text-sm lg:text-base">
                         文化旅游
                       </div>
                       {planActive != 1 && (
-                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                        <hr className="w-6 absolute hidden bottom-0 lg:flex" />
                       )}
                     </button>
                     <button
-                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                      className={`w-20 lg:w-[183px] lg:h-[75px]  lg:rounded-xl py-2 flex flex-col lg:flex-row lg:space-x-3 items-center justify-center space-y-2  lg:group outline-none lg:relative ${
                         planActive == 2 && 'bg-[#2f99fa]'
                       }`}
                       onMouseEnter={() => {
@@ -373,19 +373,19 @@ const Home: NextPage = () => {
                         alt="工业生产"
                         height={0}
                         width={0}
-                        className={`w-8 h-8 2xl:w-11 2xl:h-11 ${
-                          planActive == 2 && '2xl:tabActive'
+                        className={`w-8 h-8 lg:w-11 lg:h-11 ${
+                          planActive == 2 && 'lg:tabActive'
                         }`}
                       />
-                      <div className="text-white text-sm 2xl:text-base">
+                      <div className="text-white text-sm lg:text-base">
                         工业生产
                       </div>
                       {planActive != 2 && (
-                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                        <hr className="w-6 absolute hidden bottom-0 lg:flex" />
                       )}
                     </button>
                     <button
-                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                      className={`w-20 lg:w-[183px] lg:h-[75px]  lg:rounded-xl py-2 flex flex-col lg:flex-row lg:space-x-3 items-center justify-center space-y-2  lg:group outline-none lg:relative ${
                         planActive == 3 && 'bg-[#2f99fa]'
                       }`}
                       onMouseEnter={() => {
@@ -396,19 +396,19 @@ const Home: NextPage = () => {
                         alt="体育健康"
                         height={0}
                         width={0}
-                        className={` w-8 h-8 2xl:w-11 2xl:h-11 ${
-                          planActive == 3 && '2xl:tabActive'
+                        className={` w-8 h-8 lg:w-11 lg:h-11 ${
+                          planActive == 3 && 'lg:tabActive'
                         }`}
                       />
-                      <div className="text-white text-sm 2xl:text-base">
+                      <div className="text-white text-sm lg:text-base">
                         体育健康
                       </div>
                       {planActive != 3 && (
-                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                        <hr className="w-6 absolute hidden bottom-0 lg:flex" />
                       )}
                     </button>
                     <button
-                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                      className={`w-20 lg:w-[183px] lg:h-[75px]  lg:rounded-xl py-2 flex flex-col lg:flex-row lg:space-x-3 items-center justify-center space-y-2  lg:group outline-none lg:relative ${
                         planActive == 4 && 'bg-[#2f99fa]'
                       }`}
                       onMouseEnter={() => {
@@ -419,19 +419,19 @@ const Home: NextPage = () => {
                         alt="商贸创意"
                         height={0}
                         width={0}
-                        className={` w-8 h-8 2xl:w-11 2xl:h-11 ${
-                          planActive == 4 && '2xl:tabActive'
+                        className={` w-8 h-8 lg:w-11 lg:h-11 ${
+                          planActive == 4 && 'lg:tabActive'
                         }`}
                       />
-                      <div className="text-white text-sm 2xl:text-base">
+                      <div className="text-white text-sm lg:text-base">
                         商贸创意
                       </div>
                       {planActive != 4 && (
-                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                        <hr className="w-6 absolute hidden bottom-0 lg:flex" />
                       )}
                     </button>
                     <button
-                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                      className={`w-20 lg:w-[183px] lg:h-[75px]  lg:rounded-xl py-2 flex flex-col lg:flex-row lg:space-x-3 items-center justify-center space-y-2  lg:group outline-none lg:relative ${
                         planActive == 5 && 'bg-[#2f99fa]'
                       }`}
                       onMouseEnter={() => {
@@ -442,19 +442,19 @@ const Home: NextPage = () => {
                         alt="安全应急"
                         height={0}
                         width={0}
-                        className={` w-8 h-8 2xl:w-11 2xl:h-11 ${
-                          planActive == 5 && '2xl:tabActive'
+                        className={` w-8 h-8 lg:w-11 lg:h-11 ${
+                          planActive == 5 && 'lg:tabActive'
                         }`}
                       />
-                      <div className="text-white text-sm 2xl:text-base">
+                      <div className="text-white text-sm lg:text-base">
                         安全应急
                       </div>
                       {planActive != 5 && (
-                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                        <hr className="w-6 absolute hidden bottom-0 lg:flex" />
                       )}
                     </button>
                     <button
-                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                      className={`w-20 lg:w-[183px] lg:h-[75px]  lg:rounded-xl py-2 flex flex-col lg:flex-row lg:space-x-3 items-center justify-center space-y-2  lg:group outline-none lg:relative ${
                         planActive == 6 && 'bg-[#2f99fa]'
                       }`}
                       onMouseEnter={() => {
@@ -465,19 +465,19 @@ const Home: NextPage = () => {
                         alt="演艺娱乐"
                         height={0}
                         width={0}
-                        className={` w-8 h-8 2xl:w-11 2xl:h-11 ${
-                          planActive == 6 && '2xl:tabActive'
+                        className={` w-8 h-8 lg:w-11 lg:h-11 ${
+                          planActive == 6 && 'lg:tabActive'
                         }`}
                       />
-                      <div className="text-white text-sm 2xl:text-base">
+                      <div className="text-white text-sm lg:text-base">
                         演艺娱乐
                       </div>
                       {planActive != 6 && (
-                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                        <hr className="w-6 absolute hidden bottom-0 lg:flex" />
                       )}
                     </button>
                     <button
-                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                      className={`w-20 lg:w-[183px] lg:h-[75px]  lg:rounded-xl py-2 flex flex-col lg:flex-row lg:space-x-3 items-center justify-center space-y-2  lg:group outline-none lg:relative ${
                         planActive == 7 && 'bg-[#2f99fa]'
                       }`}
                       onMouseEnter={() => {
@@ -488,19 +488,19 @@ const Home: NextPage = () => {
                         alt="残障辅助"
                         height={0}
                         width={0}
-                        className={` w-8 h-8 2xl:w-11 2xl:h-11 ${
-                          planActive == 7 && '2xl:tabActive'
+                        className={` w-8 h-8 lg:w-11 lg:h-11 ${
+                          planActive == 7 && 'lg:tabActive'
                         }`}
                       />
-                      <div className="text-white text-sm 2xl:text-base">
+                      <div className="text-white text-sm lg:text-base">
                         残障辅助
                       </div>
                       {planActive != 7 && (
-                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                        <hr className="w-6 absolute hidden bottom-0 lg:flex" />
                       )}
                     </button>
                     <button
-                      className={`w-20 2xl:w-[183px] 2xl:h-[75px]  2xl:rounded-xl py-2 flex flex-col 2xl:flex-row 2xl:space-x-3 items-center justify-center space-y-2  2xl:group outline-none 2xl:relative ${
+                      className={`w-20 lg:w-[183px] lg:h-[75px]  lg:rounded-xl py-2 flex flex-col lg:flex-row lg:space-x-3 items-center justify-center space-y-2  lg:group outline-none lg:relative ${
                         planActive == 8 && 'bg-[#2f99fa]'
                       }`}
                       onMouseEnter={() => {
@@ -511,64 +511,64 @@ const Home: NextPage = () => {
                         alt="融合媒体"
                         height={0}
                         width={0}
-                        className={` w-8 h-8 2xl:w-11 2xl:h-11 ${
-                          planActive == 8 && '2xl:tabActive'
+                        className={` w-8 h-8 lg:w-11 lg:h-11 ${
+                          planActive == 8 && 'lg:tabActive'
                         }`}
                       />
-                      <div className="text-white text-sm 2xl:text-base">
+                      <div className="text-white text-sm lg:text-base">
                         融合媒体
                       </div>
                       {planActive != 8 && (
-                        <hr className="w-6 absolute hidden bottom-0 2xl:flex" />
+                        <hr className="w-6 absolute hidden bottom-0 lg:flex" />
                       )}
                     </button>
                   </div>
                 </div>
                 {/* 第三屏图片 */}
-                <div className="grid grid-cols-4  gap-y-4 2xl:gap-0 2xl:w-[1004px] 2xl:h-[570px] 2xl:grid-rows-2">
+                <div className="grid grid-cols-4  gap-y-4 lg:gap-0 lg:w-[1004px] lg:h-[570px] lg:grid-rows-2">
                   {planActive == 0 && (
                     <>
-                      <div className="col-span-4 relative h-44 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
+                      <div className="col-span-4 relative h-44 sm:h-96 lg:col-span-2 lg:h-full lg:overflow-hidden lg:row-span-1">
                         <Image
                           src={'/home/jypx_1.png'}
                           fill
                           alt="AR教育培训"
-                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="rounded-2xl lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                         />
-                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                           AR教育培训
                         </div>
                       </div>
-                      <div className=" col-span-4 relative h-44 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
+                      <div className=" col-span-4 relative h-44 sm:h-96 lg:col-span-2 lg:h-full lg:overflow-hidden lg:row-span-1">
                         <Image
                           src={'/home/jypx_2.png'}
                           fill
                           alt="AR教育培训"
-                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="rounded-2xl lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                         />
-                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                           AR教育培训
                         </div>
                       </div>
-                      <div className="col-span-4 relative h-44 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
+                      <div className="col-span-4 relative h-44 sm:h-96 lg:col-span-2 lg:h-full lg:overflow-hidden lg:row-span-1">
                         <Image
                           src={'/home/jypx_3.png'}
                           fill
                           alt="VR虚拟现实教育仿真开发"
-                          className="rounded-2xl  2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="rounded-2xl  lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                         />
-                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                           VR虚拟现实教育仿真开发
                         </div>
                       </div>
-                      <div className=" col-span-4 relative h-44 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-1">
+                      <div className=" col-span-4 relative h-44 sm:h-96 lg:col-span-2 lg:h-full lg:overflow-hidden lg:row-span-1">
                         <Image
                           src={'/home/jypx_4.png'}
                           fill
                           alt="遥在远程教学平台"
-                          className=" rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className=" rounded-2xl lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                         />
-                        <div className=" absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        <div className=" absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                           遥在远程教学平台
                         </div>
                       </div>
@@ -576,93 +576,93 @@ const Home: NextPage = () => {
                   )}
                   {planActive == 1 && (
                     <>
-                      <div className="col-span-4 relative h-44 2xl:col-span-2  2xl:h-full 2xl:overflow-hidden 2xl:row-span-2">
+                      <div className="col-span-4 relative h-44 sm:h-96 lg:col-span-2  lg:h-full lg:overflow-hidden lg:row-span-2">
                         <Image
                           src={'/home/whly_1.png'}
                           alt="文旅元宇宙"
                           fill
-                          className="hidden 2xl:block rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="hidden lg:block rounded-2xl lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                         />
                         <Image
                           src={'/home/whly_m_1.png'}
                           alt="文旅元宇宙"
                           fill
-                          className=" 2xl:hidden rounded-2xl"
+                          className=" lg:hidden rounded-2xl"
                         />
-                        <div className="  absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        <div className="  absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                           文旅元宇宙
                         </div>
                       </div>
-                      <div className=" col-span-4 relative h-44 2xl:col-span-2 2xl:h-full 2xl:overflow-hidden 2xl:row-span-2">
+                      <div className=" col-span-4 relative h-44 sm:h-96 lg:col-span-2 lg:h-full lg:overflow-hidden lg:row-span-2">
                         <Image
                           src={'/home/whly_2.png'}
                           fill
                           alt="山东文旅数字场景化平台"
-                          className="hidden 2xl:block rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="hidden lg:block rounded-2xl lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                         />
                         <Image
                           src={'/home/whly_m_2.png'}
                           fill
                           alt="山东文旅数字场景化平台"
-                          className=" 2xl:hidden rounded-2xl"
+                          className=" lg:hidden rounded-2xl"
                         />
-                        <div className=" absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        <div className=" absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                           山东文旅数字场景化平台
                         </div>
                       </div>
                     </>
                   )}
                   {planActive == 2 && (
-                    <div className=" col-span-4 relative h-44 2xl:col-span-4 2xl:h-full 2xl:overflow-hidden 2xl:row-span-2">
+                    <div className=" col-span-4 relative h-44 sm:h-96 lg:col-span-4 lg:h-full lg:overflow-hidden lg:row-span-2">
                       <Image
                         src={'/home/gysc_1.png'}
                         alt="数字孪生工厂"
                         fill
-                        className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        className="rounded-2xl lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                       />
-                      <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                      <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                         数字孪生工厂
                       </div>
                     </div>
                   )}
                   {planActive == 3 && (
                     <>
-                      <div className=" col-span-4 relative h-44 2xl:col-span-2 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
+                      <div className=" col-span-4 relative h-44 sm:h-96 lg:col-span-2 lg:h-full lg:row-span-2 lg:overflow-hidden">
                         <Image
                           src={'/home/tyjk_1.png'}
                           alt="自由视角体育拍摄"
                           fill
-                          className="hidden 2xl:block rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="hidden lg:block rounded-2xl lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                         />
                         <Image
                           src={'/home/tyjk_m_1.png'}
                           alt="自由视角体育拍摄"
                           fill
-                          className=" 2xl:hidden rounded-2xl"
+                          className=" lg:hidden rounded-2xl"
                         />
-                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                           自由视角体育拍摄
                         </div>
                       </div>
-                      <div className="col-span-4 relative h-44 2xl:col-span-2 2xl:row-span-1 2xl:h-full 2xl:overflow-hidden">
+                      <div className="col-span-4 relative h-44 sm:h-96 lg:col-span-2 lg:row-span-1 lg:h-full lg:overflow-hidden">
                         <Image
                           src={'/home/tyjk_2.png'}
                           fill
                           alt="沉浸式心理健康诊疗平台"
-                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="rounded-2xl lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                         />
-                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                           沉浸式心理健康诊疗平台
                         </div>
                       </div>
-                      <div className=" col-span-4 relative h-44 2xl:col-span-2 2xl:row-span-1 2xl:h-full 2xl:overflow-hidden">
+                      <div className=" col-span-4 relative h-44 sm:h-96 lg:col-span-2 lg:row-span-1 lg:h-full lg:overflow-hidden">
                         <Image
                           src={'/home/tyjk_3.png'}
                           fill
                           alt="全景赛事直播"
-                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="rounded-2xl lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                         />
-                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                           全景赛事直播
                         </div>
                       </div>
@@ -670,103 +670,103 @@ const Home: NextPage = () => {
                   )}
                   {planActive == 4 && (
                     <>
-                      <div className="col-span-4 relative h-44 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
+                      <div className="col-span-4 relative h-44 sm:h-96 lg:col-span-4 lg:h-full lg:row-span-1 lg:overflow-hidden">
                         <Image
                           src={'/home/smcy_1.png'}
                           alt="遥在远程逛展平台"
                           fill
-                          className="hidden 2xl:block rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="hidden lg:block rounded-2xl lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                         />
                         <Image
                           src={'/home/smcy_m_1.png'}
                           alt="遥在远程逛展平台"
                           fill
-                          className="2xl:hidden rounded-2xl"
+                          className="lg:hidden rounded-2xl"
                         />
-                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                           遥在远程逛展平台
                         </div>
                       </div>
-                      <div className=" col-span-4 relative h-44 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
+                      <div className=" col-span-4 relative h-44 sm:h-96 lg:col-span-4 lg:h-full lg:row-span-1 lg:overflow-hidden">
                         <Image
                           src={'/home/smcy_2.png'}
                           fill
                           alt="遥在沉浸式跨境直播带货解决方案"
-                          className="hidden 2xl:block rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="hidden lg:block rounded-2xl lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                         />
                         <Image
                           src={'/home/smcy_m_2.png'}
                           alt="遥在远程逛展平台"
                           fill
-                          className="2xl:hidden rounded-2xl"
+                          className="lg:hidden rounded-2xl"
                         />
-                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                           遥在沉浸式跨境直播带货解决方案
                         </div>
                       </div>
                     </>
                   )}
                   {planActive == 5 && (
-                    <div className=" col-span-4 relative h-48 2xl:col-span-4 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
+                    <div className=" col-span-4 relative h-48 sm:h-96 lg:col-span-4 lg:h-full lg:row-span-2 lg:overflow-hidden">
                       <Image
                         src={'/home/aqyj_1.png'}
                         alt="特种行业远程应急及实训平台"
                         fill
-                        className="rounded-2xl  2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        className="rounded-2xl  lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                       />
-                      <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                      <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                         特种行业远程应急及实训平台
                       </div>
                     </div>
                   )}
                   {planActive == 6 && (
                     <>
-                      <div className=" col-span-4 relative h-36 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
+                      <div className=" col-span-4 relative h-36 sm:h-80 lg:col-span-4 lg:h-full lg:row-span-1 lg:overflow-hidden">
                         <Image
                           src={'/home/yyyl_1.png'}
                           alt="自由视角演艺拍摄"
                           fill
-                          className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="rounded-2xl lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                         />
-                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                           自由视角演艺拍摄
                         </div>
                       </div>
-                      <div className=" col-span-4 relative h-36 2xl:col-span-4 2xl:h-full 2xl:row-span-1 2xl:overflow-hidden">
+                      <div className=" col-span-4 relative h-36 sm:h-80 lg:col-span-4 lg:h-full lg:row-span-1 lg:overflow-hidden">
                         <Image
                           src={'/home/yyyl_2.png'}
                           alt="全景演艺直播"
                           fill
-                          className="rounded-2xl  2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                          className="rounded-2xl  lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                         />
-                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                        <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                           全景演艺直播
                         </div>
                       </div>
                     </>
                   )}
                   {planActive == 7 && (
-                    <div className=" col-span-4 relative h-44 2xl:col-span-4 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
+                    <div className=" col-span-4 relative h-44 sm:h-96 lg:col-span-4 lg:h-full lg:row-span-2 lg:overflow-hidden">
                       <Image
                         src={'/home/czrs_1.png'}
                         alt="残障人士远程体验平台"
                         fill
-                        className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        className="rounded-2xl lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                       />
-                      <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                      <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                         残障人士远程体验平台
                       </div>
                     </div>
                   )}
                   {planActive == 8 && (
-                    <div className="col-span-4 relative h-44 2xl:col-span-4 2xl:h-full 2xl:row-span-2 2xl:overflow-hidden">
+                    <div className="col-span-4 relative h-44 sm:h-96 lg:col-span-4 lg:h-full lg:row-span-2 lg:overflow-hidden">
                       <Image
                         src={'/home/rhmt_1.png'}
                         alt="遥在超高清低延迟视频解决方案"
                         fill
-                        className="rounded-2xl 2xl:rounded-none 2xl:hover:scale-125 2xl:transition-transform 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                        className="rounded-2xl lg:rounded-none lg:hover:scale-125 lg:transition-transform lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                       />
-                      <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full 2xl:rounded-b-none 2xl:text-lg 2xl:px-6 2xl:py-2">
+                      <div className="absolute bottom-0 rounded-b-2xl text-white bg-black bg-opacity-[60%] text-xs py-2 px-3 w-full lg:rounded-b-none lg:text-lg lg:px-6 lg:py-2">
                         遥在超高清低延迟视频解决方案
                       </div>
                     </div>
@@ -778,13 +778,13 @@ const Home: NextPage = () => {
         </section>
         {/* 第四屏 */}
         <section>
-          <div className=" bg-white w-full  mb-5 2xl:mb-24 ">
-            <div className=" text-center mt-10 text-lg font-medium 2xl:mt-20 2xl:text-3xl">
+          <div className=" bg-white w-full  mb-5 lg:mb-24 ">
+            <div className=" text-center mt-10 text-lg font-medium lg:mt-20 lg:text-3xl">
               硬件产品
             </div>
-            <div className="flex flex-col items-center justify-center mt-4 space-y-4 2xl:flex-row 2xl:space-y-0 2xl:mt-24 2xl:h-56">
+            <div className="flex flex-col items-center justify-center mt-4 space-y-4 lg:flex-row lg:space-y-0 lg:mt-24 lg:h-56">
               <div
-                className=" bg-center bg-cover bg-no-repeat w-80 h-40 rounded-2xl relative 2xl:w-72 2xl:h-52 2xl:hover:h-56 2xl:hover:-translate-y-4 2xl:transition-all 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                className=" bg-center bg-cover bg-no-repeat w-80 h-40 rounded-2xl relative  lg:w-72 lg:h-52 lg:hover:h-56 lg:hover:-translate-y-4 lg:transition-all lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                 style={{
                   backgroundImage: `url(/home/yj_bg1.png)`,
                 }}>
@@ -792,16 +792,16 @@ const Home: NextPage = () => {
                   style={{
                     backgroundImage: `url(/home/yj_1.png)`,
                   }}
-                  className="absolute bottom-0 right-0 w-56 h-full bg-contain bg-center bg-no-repeat 2xl:w-full"></div>
+                  className="absolute bottom-0 right-0 w-56 h-full bg-contain bg-center bg-no-repeat lg:w-full"></div>
                 <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white font-bold text-xl text-center">
-                  <div className="2xl:text-2xl">TP C300</div>
-                  <div className="2xl:text-sm 2xl:font-normal mt-3">
+                  <div className="lg:text-2xl">TP C300</div>
+                  <div className="lg:text-sm lg:font-normal mt-3">
                     720°全景相机
                   </div>
                 </div>
               </div>
               <div
-                className=" bg-center bg-cover bg-no-repeat w-80 h-40 rounded-2xl relative 2xl:w-72 2xl:h-52 2xl:hover:h-56 2xl:hover:-translate-y-4 2xl:transition-all 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                className=" bg-center bg-cover bg-no-repeat w-80 h-40 rounded-2xl relative lg:w-72 lg:h-52 lg:hover:h-56 lg:hover:-translate-y-4 lg:transition-all lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                 style={{
                   backgroundImage: `url(/home/yj_bg2.png)`,
                 }}>
@@ -809,16 +809,16 @@ const Home: NextPage = () => {
                   style={{
                     backgroundImage: `url(/home/yj_2.png)`,
                   }}
-                  className=" absolute -bottom-1 right-10 w-20 h-full bg-contain bg-center bg-no-repeat 2xl:w-24 2xl:right-1"></div>
+                  className=" absolute -bottom-1 right-10 w-20 h-full bg-contain bg-center bg-no-repeat lg:w-24 lg:right-1"></div>
                 <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white font-bold text-xl text-center">
-                  <div className="2xl:text-2xl">TP Robot</div>
-                  <div className="2xl:text-sm 2xl:font-normal mt-3">
+                  <div className="lg:text-2xl">TP Robot</div>
+                  <div className="lg:text-sm lg:font-normal mt-3">
                     遥在机器人
                   </div>
                 </div>
               </div>
               <div
-                className=" bg-center bg-cover bg-no-repeat w-80 h-40 rounded-2xl relative 2xl:w-72 2xl:h-52 2xl:hover:h-56 2xl:hover:-translate-y-4 2xl:transition-all 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                className=" bg-center bg-cover bg-no-repeat w-80 h-40 rounded-2xl relative lg:w-72 lg:h-52 lg:hover:h-56 lg:hover:-translate-y-4 lg:transition-all lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                 style={{
                   backgroundImage: `url(/home/yj_bg3.png)`,
                 }}>
@@ -826,16 +826,16 @@ const Home: NextPage = () => {
                   style={{
                     backgroundImage: `url(/home/yj_3.png)`,
                   }}
-                  className=" absolute bottom-0 right-6 w-40 h-full  bg-contain bg-center bg-no-repeat 2xl:w-56 2xl:right-0"></div>
+                  className=" absolute bottom-0 right-6 w-40 h-full  bg-contain bg-center bg-no-repeat lg:w-56 lg:right-0"></div>
                 <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white font-bold text-xl text-center">
-                  <div className="2xl:text-2xl">TP C100</div>
-                  <div className="2xl:text-sm 2xl:font-normal mt-3">
+                  <div className="lg:text-2xl">TP C100</div>
+                  <div className="lg:text-sm lg:font-normal mt-3">
                     180°3D全景相机
                   </div>
                 </div>
               </div>
               <div
-                className=" bg-center bg-cover bg-no-repeat w-80 h-40 rounded-2xl relative 2xl:w-72 2xl:h-52 2xl:hover:h-56 2xl:hover:-translate-y-4 2xl:transition-all 2xl:duration-500 2xl:transform-gpu 2xl:transform-origin-center"
+                className=" bg-center bg-cover bg-no-repeat w-80 h-40 rounded-2xl relative lg:w-72 lg:h-52 lg:hover:h-56 lg:hover:-translate-y-4 lg:transition-all lg:duration-500 lg:transform-gpu lg:transform-origin-center"
                 style={{
                   backgroundImage: `url(/home/yj_bg4.png)`,
                 }}>
@@ -843,15 +843,15 @@ const Home: NextPage = () => {
                   style={{
                     backgroundImage: `url(/home/yj_4.png)`,
                   }}
-                  className="absolute bottom-0 right-10 w-32 h-full  bg-contain bg-center bg-no-repeat 2xl:w-48"></div>
+                  className="absolute bottom-0 right-10 w-32 h-full  bg-contain bg-center bg-no-repeat lg:w-48"></div>
                 <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white font-bold text-xl text-center">
-                  <div className="2xl:text-2xl">TP 视觉互动</div>
-                  <div className="2xl:text-2xl mt-3">采集模组</div>
+                  <div className="lg:text-2xl">TP 视觉互动</div>
+                  <div className="lg:text-2xl mt-3">采集模组</div>
                 </div>
               </div>
             </div>
-            <div className="flex w-[600px] max-w-full 2xl:w-[1200px] mx-auto mt-5 2xl:mt-10 overflow-hidden">
-              <div className=" flex  space-x-10 2xl:space-x-36 animate-scroll_mobile  2xl:animate-scroll hover:paused items-center">
+            <div className="flex w-[800px] max-w-full lg:w-[1200px] mx-auto mt-5 lg:mt-10 overflow-hidden">
+              <div className=" flex  space-x-10 lg:space-x-36 animate-scroll_mobile  lg:animate-scroll hover:paused items-center">
                 <Image
                   src="/navbar/logo_black.png"
                   alt="遥在科技"
@@ -915,7 +915,7 @@ const Home: NextPage = () => {
         {/* 第五屏 */}
         <section>
           <div
-            className=" 2xl:hidden bg-left bg-cover bg-no-repeat px-5 pt-5 pb-10 text-white"
+            className=" lg:hidden bg-left bg-cover bg-no-repeat px-5 pt-5 pb-10 text-white"
             style={{
               backgroundImage: `url(/home/bg_m_4.png)`,
             }}>
@@ -925,7 +925,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div
-            className="hidden 2xl:block bg-left bg-cover bg-no-repeat px-96 pt-24 pb-24 text-white"
+            className="hidden lg:block bg-left bg-cover bg-no-repeat px-[16%] pt-24 pb-24 text-white"
             style={{
               backgroundImage: `url(/home/bg_4.png)`,
             }}>
@@ -937,7 +937,7 @@ const Home: NextPage = () => {
         </section>
         {/* 第六屏 */}
         <section>
-          <div className=" bg-[#FBFCFF] 2xl:hidden pb-4">
+          <div className=" bg-[#FBFCFF] lg:hidden pb-4">
             <div className="text-xl text-center font-medium pt-9">
               虚拟现实+产业
             </div>
@@ -1034,7 +1034,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className=" grid grid-cols-2 gap-2">
+            <div className=" grid grid-cols-2 gap-2 sm:w-[500px] mx-auto">
               <Image
                 alt=""
                 width={236}
@@ -1088,7 +1088,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div
-            className="hidden 2xl:flex bg-cover bg-no-repeat bg-center w-full h-[887px]  justify-center items-center"
+            className="hidden lg:flex bg-cover bg-no-repeat bg-center w-full h-[887px]  justify-center items-center"
             style={{
               backgroundImage: `url(/home/bg_5.png)`,
             }}>
@@ -1242,11 +1242,11 @@ const Home: NextPage = () => {
         </section>
         {/* 第七屏 */}
         <section>
-          <div className="py-9 px-4 text-center mx-auto 2xl:px-80 2xl:py-20">
-            <div className="text-center font-medium text-xl mb-4 2xl:pb-8 2xl:mb-8 2xl:text-3xl 2xl:border-b-2  2xl:text-left">
+          <div className="py-9 px-4 text-center mx-auto lg:px-[10%] 2xl:px-80 lg:py-20">
+            <div className="text-center font-medium text-xl mb-4 lg:pb-8 lg:mb-8 lg:text-3xl lg:border-b-2  lg:text-left">
               遥在科技
             </div>
-            <div className="2xl:hidden">
+            <div className="lg:hidden">
               <div className="py-1 px-4">
                 <button
                   className=" border-b outline-none group w-full flex items-center justify-between text-[#333]"
@@ -1479,9 +1479,9 @@ const Home: NextPage = () => {
                 )}
               </div>
             </div>
-            <div className="hidden 2xl:flex  2xl:justify-around">
+            <div className="hidden lg:flex  lg:justify-around">
               <div className="flex flex-col   items-start space-y-3">
-                <div className="2xl:text-base font-semibold  mb-3">
+                <div className="lg:text-base font-semibold  mb-3">
                   软件技术&服务
                 </div>
                 <Link
@@ -1496,9 +1496,7 @@ const Home: NextPage = () => {
                 </Link>
               </div>
               <div className="flex flex-col   items-start space-y-3">
-                <div className="2xl:text-base font-semibold  mb-3">
-                  硬件产品
-                </div>
+                <div className="lg:text-base font-semibold  mb-3">硬件产品</div>
                 <Link
                   className="link relative transition-colors hover:text-blue-400"
                   href="/">
@@ -1521,9 +1519,7 @@ const Home: NextPage = () => {
                 </Link>
               </div>
               <div className="flex flex-col   items-start space-y-3">
-                <div className="2xl:text-base font-semibold  mb-3">
-                  解决方案
-                </div>
+                <div className="lg:text-base font-semibold  mb-3">解决方案</div>
                 <Link
                   className="link relative transition-colors hover:text-blue-400"
                   href="/">
@@ -1576,7 +1572,7 @@ const Home: NextPage = () => {
                 </Link>
               </div>
               <div className="flex flex-col   items-start space-y-3">
-                <div className="2xl:text-base font-semibold  mb-3">
+                <div className="lg:text-base font-semibold  mb-3">
                   内容研发服务
                 </div>
                 <Link
@@ -1626,9 +1622,7 @@ const Home: NextPage = () => {
                 </Link>
               </div>
               <div className="flex flex-col   items-start space-y-3">
-                <div className="2xl:text-base font-semibold  mb-3">
-                  服务支持
-                </div>
+                <div className="lg:text-base font-semibold  mb-3">服务支持</div>
                 <Link
                   className="link relative transition-colors hover:text-blue-400"
                   href="/">
@@ -1646,9 +1640,7 @@ const Home: NextPage = () => {
                 </Link>
               </div>
               <div className="flex flex-col   items-start space-y-3">
-                <div className="2xl:text-base font-semibold  mb-3">
-                  关于我们
-                </div>
+                <div className="lg:text-base font-semibold  mb-3">关于我们</div>
                 <Link
                   className="link relative transition-colors hover:text-blue-400"
                   href="/">
