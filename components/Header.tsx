@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 interface MenuType {
   name?: string
   href?: string
@@ -9,6 +10,7 @@ interface MenuType {
   menu?: MenuType[]
 }
 const Header: NextPage = () => {
+  const router = useRouter()
   const menuBtnRef = useRef<HTMLButtonElement>(null)
   const menuRef = useRef<HTMLDivElement>(null)
   const menus: MenuType = {
@@ -27,7 +29,7 @@ const Header: NextPage = () => {
             menu: [
               {
                 name: 'XR超高清低延迟云平台',
-                href: '/',
+                href: '/paas',
               },
               {
                 name: 'XR-NeRF实景建模引擎',
@@ -311,6 +313,9 @@ const Header: NextPage = () => {
             height={0}
             width={0}
             className=" h-7 w-auto cursor-pointer lg:h-14 sm:h-14"
+            onClick={() => {
+              router.push('/')
+            }}
           />
           {/* 导航栏菜单-pc */}
           <div className=" hidden space-x-14 lg:flex lg:items-center">
@@ -361,7 +366,7 @@ const Header: NextPage = () => {
                             height={25}
                           />
                           <Link
-                            href={'/'}
+                            href={'/paas'}
                             className="link relative transition-colors font-normal text-lg hover:text-blue-400">
                             XR超高清低延迟云平台
                           </Link>

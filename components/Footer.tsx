@@ -4,7 +4,6 @@ import Link from 'next/link'
 
 const Footer = () => {
   const [tabActive, setTabActive] = useState<number | boolean>(false)
-
   return (
     <footer>
       <div className="py-9 px-4 text-center mx-auto lg:px-[10%] 2xl:px-80 lg:py-20">
@@ -31,7 +30,7 @@ const Footer = () => {
             </button>
             {tabActive == 1 && (
               <div className=" flex flex-col items-start justify-center">
-                <Link href="/" className=" font-thin py-2">
+                <Link href="/paas" className=" font-thin py-2">
                   XR超高清低延迟云平台
                 </Link>
                 <Link href="/" className=" font-thin py-2">
@@ -251,7 +250,7 @@ const Footer = () => {
             </div>
             <Link
               className="link relative transition-colors hover:text-blue-400"
-              href="/">
+              href="/paas">
               XR超高清低延迟云平台
             </Link>
             <Link

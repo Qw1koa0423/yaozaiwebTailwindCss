@@ -6,7 +6,9 @@ import Footer from '../components/Footer'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay } from 'swiper'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 const Home: NextPage = () => {
+  const router = useRouter()
   //切换按钮实例
   const switchBtnRef = useRef<HTMLDivElement>(null)
   //swiper 实例
@@ -81,6 +83,13 @@ const Home: NextPage = () => {
                     <p>实时遥在 分身互动</p>
                     <p>多场景适用 多采集端适配</p>
                   </div>
+                  <button
+                    className=" mx-auto bg-[#0B9EFD] text-white text-xs rounded px-5 py-1"
+                    onClick={() => {
+                      router.push('/paas')
+                    }}>
+                    立即体验
+                  </button>
                 </div>
               </SwiperSlide>
               <SwiperSlide className="relative">
@@ -160,7 +169,7 @@ const Home: NextPage = () => {
                   width={0}
                   className=" w-full 2xl:h-screen"
                 />
-                <div className="absolute  top-1/3 left-[19%] w-full font-normal  flex flex-col space-y-7">
+                <div className="absolute  top-1/3 left-[19%] w-full font-normal  flex flex-col space-y-7 ">
                   <p className=" text-5xl ">
                     遥在式<span className=" font-bold">远程</span>互动
                     <span className=" font-bold">沉浸</span>体验
@@ -168,6 +177,25 @@ const Home: NextPage = () => {
                   <div className=" text-xl flex flex-col  space-y-2">
                     <p>实时遥在 分身互动</p>
                     <p>多场景适用 多采集端适配</p>
+                  </div>
+                  <div>
+                    <div className=" flex items-center 2xl:text-3xl lg:text-2xl">
+                      <span>全新上线！</span>
+                      <Image
+                        src={'/home/rockets.png'}
+                        alt=""
+                        width={0}
+                        height={0}
+                        className=" 2xl:w-20 2xl:h-20 object-contain lg:w-10 lg:h-10"
+                      />
+                    </div>
+                    <button
+                      className=" bg-[#0B9EFD] text-white text-lg hover:bg-blue-400 rounded-md px-10 py-2 mt-2"
+                      onClick={() => {
+                        router.push('/paas')
+                      }}>
+                      立即体验
+                    </button>
                   </div>
                 </div>
               </SwiperSlide>
