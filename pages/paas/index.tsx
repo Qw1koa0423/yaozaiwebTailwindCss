@@ -14,6 +14,30 @@ const Paas: NextPage = () => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/* pc第一屏 */}
+      <section className="hidden  lg:block">
+        
+      </section>
+      {/* 移动第一屏 */}
+      <section className="lg:hidden"></section>
+      {/* pc第二屏 */}
+      <section></section>
+      {/* 移动第二屏 */}
+      <section></section>
+      {/* pc第三屏 */}
+      <section></section>
+      {/* 移动第三屏 */}
+      <section></section>
+      {/* 第四屏 */}
+      <section></section>
+      {/* pc第五屏 */}
+      <section></section>
+      {/* 移动第五屏 */}
+      <section></section>
+      {/* pc第六屏 */}
+      <section></section>
+      {/* 移动第六屏 */}
+      <section></section>
       <Header />
       <Footer />
     </div>
