@@ -146,7 +146,9 @@ const Paas: NextPage = () => {
           <div className=" flex  justify-around flex-wrap ">
             {PASS_DATA_TWO.map((item, index) => {
               return (
-                <div className="flex flex-col items-center  space-y-2  py-4 px-5 w-1/2  break-all">
+                <div
+                  key={item.img}
+                  className="flex flex-col items-center  space-y-2  py-4 px-5 w-1/2  break-all">
                   <Image
                     alt={item.title}
                     src={item.img}
