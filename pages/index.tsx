@@ -85,7 +85,8 @@ const Home: NextPage = () => {
                   </div>
                   <button
                     className=" mx-auto bg-[#0B9EFD] text-white text-xs rounded px-5 py-1"
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault()
                       router.push('/paas')
                     }}>
                     立即体验
@@ -191,7 +192,8 @@ const Home: NextPage = () => {
                     </div>
                     <button
                       className=" bg-[#0B9EFD] text-white text-lg hover:bg-blue-400 rounded-md px-10 py-2 mt-2"
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault()
                         router.push('/paas')
                       }}>
                       立即体验
