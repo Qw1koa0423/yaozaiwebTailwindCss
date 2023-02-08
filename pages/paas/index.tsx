@@ -168,7 +168,7 @@ const Paas: NextPage = () => {
           热门应用场景
         </div>
         <div className="lg:flex lg:items-center">
-          <div className="lg:w-[55%]">
+          <div className="lg:w-[60%] 2xl:w-[40.5rem]">
             <Image
               src={'/paas/rmyycj.png'}
               alt=""
@@ -177,7 +177,7 @@ const Paas: NextPage = () => {
               className=" lg:w-full"
             />
           </div>
-          <div className="lg:ml-6">
+          <div className="lg:ml-3">
             <div>
               <div className="lg:flex lg:items-center">
                 <div className=" lg:w-8 lg:h-8 lg:mr-[0.63rem]">
@@ -197,7 +197,7 @@ const Paas: NextPage = () => {
                 超越时间空间的限制，随时随地参展，不错过每一场寻找更多商机的时刻
               </div>
             </div>
-            <div className="lg:mt-3">
+            <div className="lg:mt-2 2xl:mt-6">
               <div className="lg:flex lg:items-center">
                 <div className=" lg:w-8 lg:h-8 lg:mr-[0.63rem]">
                   <Image
@@ -216,7 +216,7 @@ const Paas: NextPage = () => {
                 第一时间排查潜在危险，降低事故发生率，守护生命财产安全
               </div>
             </div>
-            <div className="lg:mt-3">
+            <div className="lg:mt-2 2xl:mt-6">
               <div className="lg:flex lg:items-center">
                 <div className=" lg:w-8 lg:h-8 lg:mr-[0.63rem]">
                   <Image
@@ -235,7 +235,7 @@ const Paas: NextPage = () => {
                 纵使地域相隔千万里，也可以拥有近在咫尺的真实体验
               </div>
             </div>
-            <div className="lg:mt-3">
+            <div className="lg:mt-2 2xl:mt-6">
               <div className="lg:flex lg:items-center">
                 <div className=" lg:w-8 lg:h-8 lg:mr-[0.63rem]">
                   <Image
@@ -254,7 +254,7 @@ const Paas: NextPage = () => {
                 全景课堂，支持老师和学生互动连麦，远程沉浸式的学习体验
               </div>
             </div>
-            <div className="lg:mt-3">
+            <div className="lg:mt-2 2xl:mt-6">
               <div className="lg:flex lg:items-center">
                 <div className=" lg:w-8 lg:h-8 lg:mr-[0.63rem]">
                   <Image
@@ -273,7 +273,7 @@ const Paas: NextPage = () => {
                 交流可以联系你我，互动更能拉近你我之间的距离，在游戏中体验真实
               </div>
             </div>
-            <div className="lg:mt-3">
+            <div className="lg:mt-2 2xl:mt-6">
               <div className="lg:flex lg:items-center">
                 <div className=" lg:w-8 lg:h-8 lg:mr-[0.63rem]">
                   <Image
@@ -292,7 +292,7 @@ const Paas: NextPage = () => {
                 一对一的诊疗体验，免去您四处寻医问药的奔波劳累，为您的健康保驾护航
               </div>
             </div>
-            <div className="lg:mt-3">
+            <div className="lg:mt-2 2xl:mt-6">
               <div className="lg:flex lg:items-center">
                 <div className=" lg:w-8 lg:h-8 lg:mr-[0.63rem]">
                   <Image
@@ -441,7 +441,7 @@ const Paas: NextPage = () => {
       </section>
       {/* pc第五屏 */}
       <section
-        className=" hidden lg:block lg:bg-cover lg:px-[15%] 2xl:px-80 lg:justify-around"
+        className=" hidden lg:block lg:bg-cover lg:px-[15%] 2xl:px-[30rem] lg:justify-around"
         style={{
           backgroundImage: `url(/paas/bg_2.png)`,
         }}>
@@ -449,7 +449,7 @@ const Paas: NextPage = () => {
           首购特惠，新人专享
         </div>
         <div className="lg:flex lg:pb-28 ">
-          <div className="group  lg:mb-5 lg:w-full lg:pl-8 lg:justify-between lg:pr-8 lg:pt-8 lg:items-center lg:bg-[#ffffff] hover:shadow-md">
+          <div className="group w-[23.75]  lg:mb-5 lg:w-full lg:pl-8 lg:justify-between lg:pr-8 lg:pt-8 lg:items-center lg:bg-[#ffffff] hover:shadow-md">
             <div className="lg:w-16 lg:block lg:h-11 group-hover:hidden">
               <Image
                 src={'/paas/jqcjb.png'}
@@ -481,7 +481,7 @@ const Paas: NextPage = () => {
               </button>
             </div>
           </div>
-          <div className="group  mr-7 ml-7 lg:mb-5 lg:w-full lg:pl-8 lg:justify-between lg:pr-8 lg:pt-8 lg:items-center lg:bg-[#ffffff] hover:shadow-md">
+          <div className="group w-[23.75]  mr-7 ml-7 lg:mb-5 lg:w-full lg:pl-8 lg:justify-between lg:pr-8 lg:pt-8 lg:items-center lg:bg-[#ffffff] hover:shadow-md">
             <div className="lg:w-16 lg:block lg:h-11 group-hover:hidden">
               <Image
                 src={'/paas/jqcjb.png'}
@@ -515,7 +515,7 @@ const Paas: NextPage = () => {
               </button>
             </div>
           </div>
-          <div className="group  lg:mb-5 lg:w-full lg:pl-8 lg:justify-between lg:pr-8 lg:pt-8 lg:items-center lg:bg-[#ffffff] hover:shadow-md">
+          <div className="group w-[23.75] lg:mb-5 lg:w-full lg:pl-8 lg:justify-between lg:pr-8 lg:pt-8 lg:items-center lg:bg-[#ffffff] hover:shadow-md">
             <div className="lg:w-16 lg:block lg:h-11 group-hover:hidden">
               <Image
                 src={'/paas/jqcjb.png'}
