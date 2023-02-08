@@ -155,7 +155,7 @@ const Home: NextPage = () => {
           <div className=" relative overflow-hidden max-w-full">
             <Swiper
               ref={swiperRef}
-              className="mySwiper w-full"
+              className="mySwiper swiper-no-swiping w-full"
               onSwiper={(swiper) => {
                 swiperRef.current = swiper
               }}
