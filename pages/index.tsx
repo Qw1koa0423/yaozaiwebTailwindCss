@@ -179,14 +179,14 @@ const Home: NextPage = () => {
                     <p>多场景适用 多采集端适配</p>
                   </div>
                   <div>
-                    <div className=" flex items-center 2xl:text-3xl lg:text-2xl">
+                    <div className=" flex items-center 2xl:text-3xl lg:text-2xl mt-10">
                       <span>全新上线！</span>
                       <Image
                         src={'/home/rockets.png'}
                         alt=""
                         width={0}
                         height={0}
-                        className=" 2xl:w-20 2xl:h-20 object-contain lg:w-10 lg:h-10"
+                        className=" 2xl:w-14 2xl:h-14 object-contain lg:w-10 lg:h-10 -translate-y-2"
                       />
                     </div>
                     <button

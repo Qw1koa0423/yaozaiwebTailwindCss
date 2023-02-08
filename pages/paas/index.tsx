@@ -116,7 +116,9 @@ const Paas: NextPage = () => {
           <div className=" flex justify-center space-x-10">
             {PASS_DATA_TWO.map((item, index) => {
               return (
-                <div className="flex flex-col items-center justify-center space-y-4 w-64 text-center">
+                <div
+                  key={item.img}
+                  className="flex flex-col items-center justify-center space-y-4 w-64 text-center">
                   <Image
                     alt={item.title}
                     src={item.img}
