@@ -74,7 +74,7 @@ const Home: NextPage = () => {
                   width={0}
                   className=" w-screen"
                 />
-                <div className="absolute  top-2/3 w-full font-normal text-center  flex flex-col space-y-3">
+                <div className="absolute  top-[60%] sm:top-2/3 w-full font-normal text-center  flex flex-col space-y-3">
                   <p className="text-base ">
                     遥在式<span className=" font-bold">远程</span>互动
                     <span className=" font-bold">沉浸</span>体验
