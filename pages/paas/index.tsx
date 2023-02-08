@@ -441,15 +441,15 @@ const Paas: NextPage = () => {
       </section>
       {/* pc第五屏 */}
       <section
-        className=" hidden lg:block lg:bg-cover lg:px-[15%] 2xl:px-[30rem] lg:justify-around"
+        className=" hidden lg:block lg:bg-cover lg:px-[15%] 2xl:px-[30rem]"
         style={{
           backgroundImage: `url(/paas/bg_2.png)`,
         }}>
         <div className=" lg:text-4xl lg:font-medium lg:text-center lg:pt-16 lg:pb-10">
           首购特惠，新人专享
         </div>
-        <div className="lg:flex lg:pb-28 ">
-          <div className="group w-[23.75]  lg:mb-5 lg:w-full lg:pl-8 lg:justify-between lg:pr-8 lg:pt-8 lg:items-center lg:bg-[#ffffff] hover:shadow-md">
+        <div className="lg:flex lg:pb-28  lg:justify-center">
+          <div className="lg:group lg:w-[23.75rem]  lg:mb-5 lg:pl-8 lg:justify-between lg:pr-8 lg:pt-8 lg:items-center lg:bg-[#ffffff] hover:shadow-md">
             <div className="lg:w-16 lg:block lg:h-11 group-hover:hidden">
               <Image
                 src={'/paas/jqcjb.png'}
@@ -481,7 +481,7 @@ const Paas: NextPage = () => {
               </button>
             </div>
           </div>
-          <div className="group w-[23.75]  mr-7 ml-7 lg:mb-5 lg:w-full lg:pl-8 lg:justify-between lg:pr-8 lg:pt-8 lg:items-center lg:bg-[#ffffff] hover:shadow-md">
+          <div className="lg:group lg:w-[23.75rem]  mr-7 ml-7 lg:mb-5 lg:pl-8 lg:justify-between lg:pr-8 lg:pt-8 lg:items-center lg:bg-[#ffffff] hover:shadow-md">
             <div className="lg:w-16 lg:block lg:h-11 group-hover:hidden">
               <Image
                 src={'/paas/jqcjb.png'}
@@ -515,7 +515,7 @@ const Paas: NextPage = () => {
               </button>
             </div>
           </div>
-          <div className="group w-[23.75] lg:mb-5 lg:w-full lg:pl-8 lg:justify-between lg:pr-8 lg:pt-8 lg:items-center lg:bg-[#ffffff] hover:shadow-md">
+          <div className="lg:group lg:w-[23.75rem] lg:mb-5 lg:pl-8 lg:justify-between lg:pr-8 lg:pt-8 lg:items-center lg:bg-[#ffffff] hover:shadow-md">
             <div className="lg:w-16 lg:block lg:h-11 group-hover:hidden">
               <Image
                 src={'/paas/jqcjb.png'}
@@ -652,9 +652,9 @@ const Paas: NextPage = () => {
         </div>
       </section>
       {/* pc第六屏 */}
-      <section className=" hidden lg:flex">
+      <section className=" hidden lg:block">
         <div
-          className="lg:w-full lg:h-96 lg:flex lg:items-center lg:px-[10%] 2xl:px-80 lg:justify-around"
+          className="lg:w-full lg:bg-cover lg:h-96 lg:flex lg:items-center lg:px-[10%] 2xl:px-80 lg:justify-around"
           style={{
             backgroundImage: `url(/paas/bg_3.png)`,
           }}>
