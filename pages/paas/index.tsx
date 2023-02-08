@@ -165,11 +165,11 @@ const Paas: NextPage = () => {
         </div>
       </section>
       {/* pc第四屏 */}
-      <section className=" hidden lg:block lg:bg-cover lg:pb-16 lg:px-[15%] 2xl:px-80">
+      <section className=" hidden lg:block lg:bg-cover lg:pb-16 lg:px-[15%] 2xl:px-[10rem]">
         <div className=" lg:text-4xl lg:font-medium lg:text-center lg:pt-16 lg:pb-10">
           热门应用场景
         </div>
-        <div className="lg:flex lg:items-center">
+        <div className="lg:flex lg:justify-center lg:items-center">
           <div className="lg:w-[60%] 2xl:w-[40.5rem]">
             <Image
               src={'/paas/rmyycj.png'}
