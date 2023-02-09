@@ -477,7 +477,7 @@ const Paas: NextPage = () => {
             </div>
             <div className=" lg:pt-6 lg:pb-5 lg:text-center">
               <button
-                className=" lg:mx-auto lg:bg-[#0B9EFD] lg:text-white lg:text-xs lg:rounded lg:px-[3.25rem] lg:py-[0.63rem] lg:hidden group-hover:block"
+                className=" lg:mx-auto lg:bg-[#0B9EFD] hover:bg-[#49b4fb] lg:text-white lg:text-xs lg:rounded lg:px-[3.25rem] lg:py-[0.63rem] lg:hidden group-hover:block"
                 onClick={() => {
                   window.open('https://jiqing-beta.yaozai.net/user/login')
                 }}>
@@ -511,7 +511,7 @@ const Paas: NextPage = () => {
             </div>
             <div className=" lg:pt-6 lg:pb-5 lg:text-center">
               <button
-                className=" lg:mx-auto lg:bg-[#0B9EFD] lg:text-white lg:text-xs lg:rounded lg:px-[3.25rem] lg:py-[0.63rem] lg:hidden group-hover:block"
+                className=" lg:mx-auto lg:bg-[#0B9EFD] hover:bg-[#49b4fb] lg:text-white lg:text-xs lg:rounded lg:px-[3.25rem] lg:py-[0.63rem] lg:hidden group-hover:block"
                 onClick={() => {
                   window.open('https://jiqing-beta.yaozai.net/user/login')
                 }}>
@@ -545,7 +545,7 @@ const Paas: NextPage = () => {
             </div>
             <div className=" lg:pt-6 lg:pb-5 lg:text-center">
               <button
-                className=" lg:mx-auto lg:bg-[#0B9EFD] lg:text-white lg:text-xs lg:rounded lg:px-[3.25rem] lg:py-[0.63rem] lg:hidden group-hover:block"
+                className=" lg:mx-auto lg:bg-[#0B9EFD] hover:bg-[#49b4fb] lg:text-white lg:text-xs lg:rounded lg:px-[3.25rem] lg:py-[0.63rem] lg:hidden group-hover:block"
                 onClick={() => {
                   window.open('https://jiqing-beta.yaozai.net/user/login')
                 }}>
@@ -646,7 +646,7 @@ const Paas: NextPage = () => {
           </div>
           <div className=" pt-7 pb-9 text-center">
             <button
-              className=" mx-auto bg-[#0B9EFD] text-white text-xs rounded px-[1rem] py-[0.35rem]"
+              className=" mx-auto bg-[#0B9EFD]  text-white text-xs rounded px-[1rem] py-[0.35rem]"
               onClick={() => {
                 window.open('https://jiqing-beta.yaozai.net/user/login')
               }}>
