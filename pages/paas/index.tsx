@@ -36,7 +36,7 @@ const Paas: NextPage = () => {
             <div>
               <button
                 onClick={() => {
-                  window.open('https://jiqing-beta.yaozai.net/user/login')
+                  window.open('https://jiqing.yaozai.net/user/login')
                 }}
                 className="bg-[#0b9efd] hover:bg-[#49b4fb] text-lg  text-white px-11  py-3 rounded-lg  mt-6">
                 立即体验
@@ -66,7 +66,7 @@ const Paas: NextPage = () => {
               <button
                 className="bg-[#0b9efd]  text-xs  text-white px-5  py-2  rounded  mt-3"
                 onClick={() => {
-                  window.open('https://jiqing-beta.yaozai.net/user/login')
+                  window.open('https://jiqing.yaozai.net/user/login')
                 }}>
                 立即体验
               </button>
@@ -479,7 +479,7 @@ const Paas: NextPage = () => {
               <button
                 className=" lg:mx-auto lg:bg-[#0B9EFD] hover:bg-[#49b4fb] lg:text-white lg:text-xs lg:rounded lg:px-[3.25rem] lg:py-[0.63rem] lg:hidden group-hover:block"
                 onClick={() => {
-                  window.open('https://jiqing-beta.yaozai.net/user/login')
+                  window.open('https://jiqing.yaozai.net/user/login')
                 }}>
                 立即购买
               </button>
@@ -513,7 +513,7 @@ const Paas: NextPage = () => {
               <button
                 className=" lg:mx-auto lg:bg-[#0B9EFD] hover:bg-[#49b4fb] lg:text-white lg:text-xs lg:rounded lg:px-[3.25rem] lg:py-[0.63rem] lg:hidden group-hover:block"
                 onClick={() => {
-                  window.open('https://jiqing-beta.yaozai.net/user/login')
+                  window.open('https://jiqing.yaozai.net/user/login')
                 }}>
                 立即购买
               </button>
@@ -547,7 +547,7 @@ const Paas: NextPage = () => {
               <button
                 className=" lg:mx-auto lg:bg-[#0B9EFD] hover:bg-[#49b4fb] lg:text-white lg:text-xs lg:rounded lg:px-[3.25rem] lg:py-[0.63rem] lg:hidden group-hover:block"
                 onClick={() => {
-                  window.open('https://jiqing-beta.yaozai.net/user/login')
+                  window.open('https://jiqing.yaozai.net/user/login')
                 }}>
                 立即购买
               </button>
@@ -588,7 +588,7 @@ const Paas: NextPage = () => {
             <button
               className=" mx-auto bg-[#0B9EFD] text-white text-xs rounded px-[1rem] py-[0.35rem]"
               onClick={() => {
-                window.open('https://jiqing-beta.yaozai.net/user/login')
+                window.open('https://jiqing.yaozai.net/user/login')
               }}>
               立即购买
             </button>
@@ -618,7 +618,7 @@ const Paas: NextPage = () => {
             <button
               className=" mx-auto bg-[#0B9EFD] text-white text-xs rounded px-[1rem] py-[0.35rem]"
               onClick={() => {
-                window.open('https://jiqing-beta.yaozai.net/user/login')
+                window.open('https://jiqing.yaozai.net/user/login')
               }}>
               立即购买
             </button>
@@ -648,7 +648,7 @@ const Paas: NextPage = () => {
             <button
               className=" mx-auto bg-[#0B9EFD]  text-white text-xs rounded px-[1rem] py-[0.35rem]"
               onClick={() => {
-                window.open('https://jiqing-beta.yaozai.net/user/login')
+                window.open('https://jiqing.yaozai.net/user/login')
               }}>
               立即购买
             </button>
