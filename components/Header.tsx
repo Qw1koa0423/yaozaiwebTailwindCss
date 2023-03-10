@@ -279,7 +279,8 @@ const Header: NextPage = () => {
               if (!item.href && list.menu) {
                 setMenuList(list.menu[index])
               }
-            }}>
+            }}
+          >
             <span>{item.name}</span>
             {!item.href && (
               <Image
@@ -321,7 +322,8 @@ const Header: NextPage = () => {
           <div className=" hidden space-x-14 lg:flex lg:items-center">
             <Link
               href={'/'}
-              className="link relative transition-colors hover:text-blue-400">
+              className="link relative transition-colors hover:text-blue-400"
+            >
               <span className=" whitespace-nowrap">首页</span>
             </Link>
             {/* 软件技术与服务 */}
@@ -367,7 +369,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/paas'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             XR超高清低延迟云平台
                           </Link>
                         </div>
@@ -380,7 +383,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             XR-NeRF实景建模引擎
                           </Link>
                         </div>
@@ -407,7 +411,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg  hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg  hover:text-blue-400"
+                          >
                             相机端低延迟SDK
                           </Link>
                         </div>
@@ -420,7 +425,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             VR/AR播放端SDK
                           </Link>
                         </div>
@@ -462,7 +468,8 @@ const Header: NextPage = () => {
                       </div>
                       <Link
                         href={'/'}
-                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400"
+                      >
                         TP Robot
                       </Link>
                     </div>
@@ -477,7 +484,8 @@ const Header: NextPage = () => {
                       </div>
                       <Link
                         href={'/'}
-                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400"
+                      >
                         TP C100
                       </Link>
                     </div>
@@ -492,7 +500,8 @@ const Header: NextPage = () => {
                       </div>
                       <Link
                         href={'/'}
-                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400"
+                      >
                         TP C300
                       </Link>
                     </div>
@@ -507,7 +516,8 @@ const Header: NextPage = () => {
                       </div>
                       <Link
                         href={'/'}
-                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400"
+                      >
                         TP 视觉互动采集模组
                       </Link>
                     </div>
@@ -556,7 +566,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             遥在远程教学平台
                           </Link>
                         </div>
@@ -569,7 +580,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             遥在旅游专业实训平台
                           </Link>
                         </div>
@@ -582,14 +594,15 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             XR实训教室
                           </Link>
                         </div>
                       </div>
                     </div>
                     <div className=" flex flex-col items-center justify-start space-y-5 col-span-2">
-                      <div className=" flex items-center h-40">
+                      <div className=" flex items-center h-40 scale-[1.3]">
                         <Image
                           src={'/navbar/whly.png'}
                           alt="文化旅游"
@@ -608,7 +621,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             山东文旅元宇宙平台
                           </Link>
                         </div>
@@ -621,7 +635,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             山东文旅数字场景化平台
                           </Link>
                         </div>
@@ -634,14 +649,15 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             遥在远程祈福平台
                           </Link>
                         </div>
                       </div>
                     </div>
                     <div className=" flex flex-col items-center justify-start space-y-5 col-span-2">
-                      <div className=" flex items-center h-40">
+                      <div className=" flex items-center h-40 scale-110">
                         <Image
                           src={'/navbar/gysc.png'}
                           alt="工业生产"
@@ -660,7 +676,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             数字孪生工厂
                           </Link>
                         </div>
@@ -686,7 +703,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             自由视角体育拍摄
                           </Link>
                         </div>
@@ -699,7 +717,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             全景赛事直播
                           </Link>
                         </div>
@@ -712,7 +731,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             沉浸式心理健康诊疗平台
                           </Link>
                         </div>
@@ -738,7 +758,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             自由视角演绎拍摄
                           </Link>
                         </div>
@@ -751,14 +772,15 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             全景演艺直播
                           </Link>
                         </div>
                       </div>
                     </div>
                     <div className=" flex flex-col items-center justify-start space-y-5 col-span-2">
-                      <div className=" flex items-center h-40">
+                      <div className=" flex items-center h-40 scale-90">
                         <Image
                           src={'/navbar/czfz.png'}
                           alt="残障辅助"
@@ -777,7 +799,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             残障人士远程体验平台
                           </Link>
                         </div>
@@ -803,7 +826,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400"
+                          >
                             遥在远程逛展平台
                           </Link>
                         </div>
@@ -816,7 +840,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400 ">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400 "
+                          >
                             遥在沉浸式跨境直播带货解决方案
                           </Link>
                         </div>
@@ -842,7 +867,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400 whitespace-nowrap">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400 whitespace-nowrap"
+                          >
                             特种行业远程应急及实训平台
                           </Link>
                         </div>
@@ -868,7 +894,8 @@ const Header: NextPage = () => {
                           />
                           <Link
                             href={'/'}
-                            className="link relative transition-colors font-normal text-lg hover:text-blue-400 ">
+                            className="link relative transition-colors font-normal text-lg hover:text-blue-400 "
+                          >
                             遥在超高清低延迟视频解决方案
                           </Link>
                         </div>
@@ -910,7 +937,8 @@ const Header: NextPage = () => {
                       </div>
                       <Link
                         href={'/'}
-                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400"
+                      >
                         3D 全景直播
                       </Link>
                     </div>
@@ -925,7 +953,8 @@ const Header: NextPage = () => {
                       </div>
                       <Link
                         href={'/'}
-                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400"
+                      >
                         全景内容
                       </Link>
                     </div>
@@ -940,7 +969,8 @@ const Header: NextPage = () => {
                       </div>
                       <Link
                         href={'/'}
-                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400"
+                      >
                         自由视角直播
                       </Link>
                     </div>
@@ -955,7 +985,8 @@ const Header: NextPage = () => {
                       </div>
                       <Link
                         href={'/'}
-                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400"
+                      >
                         虚拟仿真与数字孪生
                       </Link>
                     </div>
@@ -970,7 +1001,8 @@ const Header: NextPage = () => {
                       </div>
                       <Link
                         href={'/'}
-                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400">
+                        className="link relative transition-colors font-normal text-2xl hover:text-blue-400"
+                      >
                         NeRF建模
                       </Link>
                     </div>
@@ -1004,7 +1036,8 @@ const Header: NextPage = () => {
             }, 500)
           }}
           className="block hamburger focus:outline-none  lg:hidden sm:scale-150"
-          type="button">
+          type="button"
+        >
           <span className="hamburger-top"></span>
           <span className="hamburger-middle"></span>
           <span className="hamburger-bottom"></span>
@@ -1013,7 +1046,8 @@ const Header: NextPage = () => {
       {/* 导航栏菜单-mobile */}
       <div
         className="fixed top-0 right-0 w-1/2 h-full  bg-white z-30 translate-x-full transition-transform duration-500 ease-in-out px-3"
-        ref={menuRef}>
+        ref={menuRef}
+      >
         {menuList.btn && (
           <button
             className=" absolute top-2 flex space-x-0.5 items-center text-base"
@@ -1023,7 +1057,8 @@ const Header: NextPage = () => {
               } else {
                 setMenu(menuList)
               }
-            }}>
+            }}
+          >
             <Image
               src={'/navbar/action-left.svg'}
               alt=""
